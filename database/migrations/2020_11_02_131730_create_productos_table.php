@@ -21,6 +21,9 @@ class CreateProductosTable extends Migration
             $table->string('nombre',50);
             $table->text('descripcion');
             $table->string('urlfoto',50)->default("foto.jpg");
+            $table->integer('porcentaje')->default(0);
+            $table->decimal('precio')->default(0);
+            $table->decimal('ganancia')->default(0);
             $table->string('visitas')->default(0);
             $table->string('orden')->default(0);
             $table->foreignId('categoria_id')->constrained();

@@ -9,14 +9,23 @@ use App\Models\Categoria;
 use App\Models\Producto;
 use App\Models\Post;
 use App\Models\Empresa;
+use App\Models\testimonio;
+
 
 class FrontController extends Controller
 {
     public function index(){
         $carrusel = Carrusel::orderBy('orden','asc')->get();
-        $producto = Producto::orderBy('visitas','desc')->take(3)->get();
-        $posts = Post::orderBy('created_at','desc')->take(2)->get();
-        return view('welcome',compact('carrusel','producto','posts'));
+        $producto = Producto::orderBy('visitas','desc')->take(4)->get();
+        $posts = Post::orderBy('created_at','desc')->take(1)->get();    
+        $pulceras = Producto::where('categoria_id','9')->get();
+        $dijes = Producto::where('categoria_id','10')->get();
+        $cadenas = Producto::where('categoria_id','11')->get();
+        $aretes = Producto::where('categoria_id','12')->get();
+        $anillos = Producto::where('categoria_id','13')->get();
+        $testimonios = testimonio::orderBy('created_at','desc')->take(1)->get(); 
+        
+        return view('welcome',compact('carrusel','producto','posts', 'pulceras','dijes','cadenas','aretes','anillos','testimonios'));
     }
 
     public function empresa(){
@@ -32,6 +41,10 @@ class FrontController extends Controller
     public function categoria($categoria){
         $categoria = Categoria::whereSlug($categoria)->first();
         return view('front.categoria',compact('categoria'));
+    }
+    public function pulceras($pulceras){
+        $pulceras = Producto::whereSlug($pulceras)->first();
+        return view('front.producto',compact('pulceras'));
     }
     public function producto($categoria,$producto){
         $producto = Producto::whereSlug($producto)->first();

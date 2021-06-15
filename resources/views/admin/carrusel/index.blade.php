@@ -4,6 +4,7 @@
 <div class="container">
     <div class="row">
         @include('admin.submenu')
+        @if (Auth::user()->tipo_usuario == '1')
         <div class="col-sm-10">
             <a href="{{route('carrusel.create')}}" class="btn btn-success">NUEVO</a>
             <table class="table table-striped">
@@ -31,6 +32,7 @@
 
             </table>
         </div>
+        @endif
     </div>
 </div>
 @endsection

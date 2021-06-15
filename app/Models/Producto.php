@@ -16,6 +16,9 @@ class Producto extends Model
         'nombre',
         'descripcion',
         'urlfoto',
+        'porcentaje',
+        'precio',
+        'ganancia',
         'visitas',
         'orden',
         'categoria_id'

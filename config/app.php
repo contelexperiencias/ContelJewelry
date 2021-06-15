@@ -2,6 +2,7 @@
 
 return [
 
+    'Debugbar' => Barryvdh\Debugbar\Facade::class,
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -13,7 +14,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'ARTESANIAS'),
+    'name' => env('APP_NAME', 'CONTEL JEWELRY'),
 
     /*
     |--------------------------------------------------------------------------

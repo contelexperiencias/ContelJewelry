@@ -13,6 +13,7 @@ class Configuracion extends Model
         'seo_title',
         'seo_description',
         'seo_urlfoto',
+        'seo_urlvideo',
 
         'colorPrimario',
         'colorSecundario',

@@ -18,6 +18,7 @@ class CreateConfiguracionsTable extends Migration
             $table->string('seo_title',67);
             $table->string('seo_description',155);
             $table->string('seo_urlfoto',100);
+            $table->string('seo_urlvideo',50);
 
             $table->string('colorPrimario',7);
             $table->string('colorSecundario',7);

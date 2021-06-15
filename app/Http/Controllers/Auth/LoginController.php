@@ -43,7 +43,10 @@ class LoginController extends Controller
         if(Auth::user()->tipo_usuario){ 
             return '/admin/configuracion';
         }
-        return '/home';
+        else{
+            return '/admin/configuracion';
+        }
+        return '/admin/configuracion';
     }
 
 }

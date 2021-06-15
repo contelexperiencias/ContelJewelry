@@ -14,6 +14,7 @@
                 </thead>
                 <tbody>
                     @forelse ($productos as $item)
+                    
                     <tr>
                         <td>{{$item->orden}}</td>
                         <td>{{$item->nombre}}</td>

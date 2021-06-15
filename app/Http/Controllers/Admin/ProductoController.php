@@ -18,7 +18,9 @@ class ProductoController extends Controller
         }
     }
     public function create(){
-        return view('admin.producto.create');
+        $categoria_id = Session::get('categoria_id');
+        return view("admin.producto.create",compact('categoria_id'));
+       
     }
     public function store(Request $request){
 
@@ -55,7 +57,7 @@ class ProductoController extends Controller
             $imagen = $request->file('urlfoto');
             $nuevonombre = Str::slug($request->nombre).'.'.$imagen->guessExtension();
             Image::make($imagen->getRealPath())
-            ->fit(1200,650,function($constraint){ $constraint->upsize();  })
+            ->fit(828,800,function($constraint){ $constraint->upsize();  })
             ->save( public_path('/img/producto/'.$nuevonombre));
 
             $producto->urlfoto = $nuevonombre;
@@ -67,7 +69,8 @@ class ProductoController extends Controller
 
     public function edit($id){
         $producto = Producto::findOrFail($id);
-        return view('admin.producto.edit',compact('producto'));
+        $categoria_id = Session::get('categoria_id');
+        return view('admin.producto.edit',compact('producto','categoria_id'));
     }
 
     

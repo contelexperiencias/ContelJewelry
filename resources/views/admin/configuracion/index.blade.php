@@ -3,7 +3,10 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
+    
         @include('admin.submenu')
+        @if (Auth::user()->tipo_usuario == '1')
+       
         <div class="col-sm-10">
 
             {!! Form::open(['route'=>['configuracion.update',$registro],'method'=>'PUT','files'=>true]) !!}
@@ -19,9 +22,15 @@
                     {!! Form::textarea('seo_description',$registro->seo_description,['class'=>'form-control','maxlength'=>'155','rows'=>'3']) !!}
                 </div>
                 <div class="form-group">
-                    <label for="seo_urlfoto">IMAGEN DESTACADA</label> <br>
-                    <img src="/img/configuracion/{{$registro->seo_urlfoto}}">
-                    {!! Form::file('seo_urlfoto') !!}
+                    <label for="seo_urlvideo">VIDEO DESTACADO</label> <br>
+                    <iframe id="muteYouTubeVideoPlayer" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="1024" height="480" src="https://www.youtube.com/embed/6hPD62oh0Ag?autoplay=1&amp;controls=1&amp;showinfo=0&amp;modestbranding=1&amp;fs=0&amp;cc_load_policy=0&amp;iv_load_policy=3&amp;autohide=0&amp;enablejsapi=1&amp;origin=http%3A%2F%2Flocalhost%3A8000&amp;widgetid=1&amp;rel=0&amp;loop=1" style="width: 100%;"></iframe>
+                    <!-- <img src="/img/configuracion/{{$registro->seo_urlfoto}}">
+                    {!! Form::file('seo_urlfoto') !!} -->
+                </div>
+                <div class="form-group">
+                    <label for="seo_urlvideo">INGRESE ID DEL VIDEO (el codigo despues de "https://www.youtube.com/embed/" ejemplo:6hPD62oh0Ag)</label>
+                    {!! Form::text('seo_urlvideo',$registro->seo_urlvideo,['class'=>'form-control','maxlength'=>'50']) !!}
+                    
                 </div>
             </div>
 
@@ -54,18 +63,18 @@
                     {!! Form::text('slogan',$registro->slogan,['class'=>'form-control','maxlength'=>'100']) !!}
                 </div>
                 <div class="col-sm-6">
-                    <label for="frase_1">FRASE 1</label>
-                    {!! Form::text('frase_1',$registro->frase_1,['class'=>'form-control','maxlength'=>'50']) !!}
+                    <label for="frase_1">Belé</label>
+                    {!! Form::text('frase_1',$registro->frase_1,['class'=>'form-control','maxlength'=>'250']) !!}
                 </div>
                 <div class="col-sm-6">
-                    <label for="frase_2">FRASE 2</label>
-                    {!! Form::text('frase_2',$registro->frase_2,['class'=>'form-control','maxlength'=>'50']) !!}
+                    <label for="frase_2">Contel Jewelry</label>
+                    {!! Form::text('frase_2',$registro->frase_2,['class'=>'form-control','maxlength'=>'250']) !!}
                 </div>
                 
-                <div class="col-sm-6">
+                <!-- <div class="col-sm-6">
                     <label for="frase_3">FRASE 3</label>
                     {!! Form::text('frase_3',$registro->frase_3,['class'=>'form-control','maxlength'=>'50']) !!}
-                </div>
+                </div> -->
             </div>
 
 
@@ -105,6 +114,7 @@
             {!! Form::submit('GUARDAR',['class'=>'btn btn-success']) !!}
             {!! Form::close() !!}
         </div>
+        @endif
     </div>
 </div>
 @endsection
