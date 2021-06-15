@@ -60,7 +60,7 @@ class ConfiguracionController extends Controller
             $imagen = $r->file('urllogo');
             $nuevonombre = Str::slug($r->razonsocial).'.'.$imagen->guessExtension();
             Image::make($imagen->getRealPath())
-            ->resize(200,null,function($constraint){ $constraint->aspectRatio();  })
+            ->resize(226,176,function($constraint){ $constraint->aspectRatio();  })
             ->save( public_path('/img/configuracion/'.$nuevonombre));
 
             $registro->urllogo = $nuevonombre;

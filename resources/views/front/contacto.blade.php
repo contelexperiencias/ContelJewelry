@@ -1,10 +1,10 @@
 @extends('layouts.appfront')
 
 @section('content')
-<div class="container bg-warning pb-5">
+<div class="container  pb-5">
     <div class="row">
         <div class="col-sm-12">
-            <h1 class="text-danger mt-5">CONTACTO</h1>
+            <h1 class="text-danger text-center mt-5">CONTACTO</h1>
         </div>
 
         <div class="col-sm-8 bg-white p-5">

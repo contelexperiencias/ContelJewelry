@@ -33,7 +33,7 @@ class FrontController extends Controller
         return view('front.empresa',compact('empresa'));
     }
 
-    public function artesanias(){
+    public function bele(){
         $categorias = Categoria::all();
         return view('front.categorias',compact('categorias'));
     }

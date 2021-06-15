@@ -17,14 +17,26 @@
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="http://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
     <script src="/js/jquery.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
     <style>
-        h1,h2,h3,.nav-link,.font-anton{
-            font-family: 'Anton', sans-serif;
+    @import url('http://fonts.cdnfonts.com/css/lemonmilk');
+       
+       @font-face{
+        font-family:LemonMilk;
+        src:url(/fuentes/FontsFree-Net-LemonMilk.ttf);
+       }
+        .menutitle{
+            font-family: 'Lemon/Milk', sans-serif;
+            font-family: 'Lemon/Milk light', sans-serif;
+
         }
-        p,ul,li{font-family: 'Nunito', sans-serif;}
+        h1,h2,h3,.nav-link,.font-anton{
+            font-family: 'LemonMilk';
+        }
+        p,ul,li{font-family: 'Muli', sans-serif;}
         .navbar-light .navbar-nav .nav-link {color:black !important}
         .bg-danger{ background:white !important}
         .text-danger{ color:#FF4000 !important}
@@ -33,7 +45,7 @@
         *{padding:0;margin:0;}
 
 body{
-	font-family:Verdana, Geneva, sans-serif;
+	font-family: 'Muli', sans-serif;
 	font-size:18px;
 	background-color:#CCC;
 }
@@ -100,14 +112,17 @@ body{
 <div class="fb-customerchat" attribution=setup_tool page_id="781167248634441" theme_color="#0084ff" logged_in_greeting="hola! cómo podemos ayudarte?" logged_out_greeting="hola! cómo podemos ayudarte?">
 </div>
 <a href="https://api.whatsapp.com/send?phone=529981535274&text=" class="float">
-<i class="my-float"><img style= "width: 70%; margin-top:120%; "  src="/img/Logos/mensseger.png" ></i>
+<i class="my-float"><img style= "width: 70%; margin-top:220%; "  src="/img/Logos/mensseger.png" ></i>
 </a>
 </div>
 
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="https://scontent.fmex32-1.fna.fbcdn.net/v/t1.6435-1/p200x200/142400079_105138094921082_7453380853861854842_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=dbb9e7&_nc_ohc=Kb_9GCSsSiMAX_n-BFV&_nc_ht=scontent.fmex32-1.fna&tp=6&oh=97b22a52b42c5dd4782de7b6f7526e22&oe=60899CBF" alt="Logo Artesanías" width="150">
+                <img src="/img/configuracion/{{$config->urllogo}}" alt="Logo jewelry" style="image-rendering: pixelated; hight:176px;">
+                </a>
+                <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="/img/configuracion/LOGO-BELÉ-CUADRADO.png" alt="Logo jewelry" style="image-rendering: pixelated; width: 197px; hight:197px; margin-top: 77px;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -115,18 +130,18 @@ body{
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto menutitle">
                         <li class="nav-item">
-                            <a class="nav-link" href="/" title="Portada">INICIO</a>
+                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/" title="Portada">INICIO</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            ÚNETE A CONTEL JEWELRY
+                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            ÚNETE
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" >Nosotros</a>   
-                            <a class="dropdown-item"  >Modelo de negocio</a>  
-                            <a class="dropdown-item"  >Galería</a>  
+                            <a style="font-family:LemonMilk;" class="dropdown-item" >Nosotros</a>   
+                            <a style="font-family:LemonMilk;" class="dropdown-item"  >Modelo de negocio</a>  
+                            <a style="font-family:LemonMilk;" class="dropdown-item"  >Galería</a>  
                                 <!-- @forelse ($submenu as $item)
                                 <a class="dropdown-item" href="/artesanias/{{$item->slug}}" title="{{$item->nombre}}" >{{$item->nombre}}</a>    
                                 @empty
@@ -136,24 +151,17 @@ body{
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="/empresa" title="Empresa"></a>
                         </li> -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              COMPRAR
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/artesanias/{{$item->slug}}" title="{{$item->nombre}}" >Catálogo</a>   
-                            <a class="dropdown-item" href="/artesanias/{{$item->slug}}" title="{{$item->nombre}}" >Cofres</a>     
-                                <!-- @forelse ($submenu as $item)
-                                <a class="dropdown-item" href="/artesanias/{{$item->slug}}" title="{{$item->nombre}}" >{{$item->nombre}}</a>    
-                                @empty
-                                @endforelse -->
-                            </div>
+                        <li class="nav-item">
+                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/blog" title="Últimas publicaciones">GALERÍA</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/blog" title="Últimas publicaciones">BLOG</a>
+                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/blog" title="Últimas publicaciones">BLOG</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/contacto" title="Datos contacto">CONTACTO</a>
+                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/blog" title="Últimas publicaciones">EVENTOS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/contacto" title="Datos contacto">CONTACTO</a>
                         </li>
                     </ul>
 
@@ -186,7 +194,7 @@ window.fbAsyncInit =function(){
                 <div class="row">
                 <div class= "container col-lg-4 col-md-12" style="text-align: center;">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                          <img src="https://scontent.fmex32-1.fna.fbcdn.net/v/t1.6435-1/p200x200/142400079_105138094921082_7453380853861854842_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=dbb9e7&_nc_ohc=Kb_9GCSsSiMAX_n-BFV&_nc_ht=scontent.fmex32-1.fna&tp=6&oh=97b22a52b42c5dd4782de7b6f7526e22&oe=60899CBF" alt="Logo Artesanías" width="150">
+                <img src="/img/configuracion/{{$config->urllogo}}" alt="Logo jewelry" style="image-rendering: pixelated; width: 50%;">
                 </a>  
                 </div>
                 <div class= "col-lg-8"  style="margin-top: 6%;">

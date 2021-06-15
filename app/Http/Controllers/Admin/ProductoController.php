@@ -31,7 +31,7 @@ class ProductoController extends Controller
             $imagen = $request->file('urlfoto');
             $nuevonombre = Str::slug($request->nombre).'.'.$imagen->guessExtension();
             Image::make($imagen->getRealPath())
-            ->fit(1200,650,function($constraint){ $constraint->upsize();  })
+            ->fit(1200,800,function($constraint){ $constraint->upsize();  })
             ->save( public_path('/img/producto/'.$nuevonombre));
 
             $producto->urlfoto = $nuevonombre;
@@ -50,20 +50,26 @@ class ProductoController extends Controller
 
 
         if($request->hasFile('urlfoto')){
+        
 
             $rutaAnterior = public_path('/img/producto/'.$foto_anterior);
             if(file_exists($rutaAnterior)){ unlink(realpath($rutaAnterior)); }
 
             $imagen = $request->file('urlfoto');
-            $nuevonombre = Str::slug($request->nombre).'.'.$imagen->guessExtension();
+            // Str::slug($request->nombre)
+            $nuevonombre = 'producto_'.$request->nombre.'.'.$imagen->guessExtension();
             Image::make($imagen->getRealPath())
-            ->fit(828,800,function($constraint){ $constraint->upsize();  })
+            ->fit(1200,800,function($constraint){ $constraint->upsize();  })
             ->save( public_path('/img/producto/'.$nuevonombre));
 
             $producto->urlfoto = $nuevonombre;
         }
         $producto->slug    =   Str::slug($request->nombre);
+        $message = "se sube foto";
+        error_log($message);
+       
         $producto->save();
+        error_log('Some message here.');
         return redirect('/admin/producto');
     }
 
