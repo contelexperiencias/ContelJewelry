@@ -28,6 +28,18 @@
         font-family:LemonMilk;
         src:url(/fuentes/FontsFree-Net-LemonMilk.ttf);
        }
+       @font-face{
+        font-family:CaviarDreams;
+        src:url(/fuentes/CaviarDreams.ttf);
+       }
+       @font-face{
+        font-family:CaviarDreams_Bold;
+        src:url(/fuentes/CaviarDreams_Bold.ttf);
+       }
+       @font-face{
+        font-family:CaviarDreams_Italic;
+        src:url(/fuentes/CaviarDreams_Italic.ttf);
+       }
         .menutitle{
             font-family: 'Lemon/Milk', sans-serif;
             font-family: 'Lemon/Milk light', sans-serif;
@@ -49,7 +61,22 @@ body{
 	font-size:18px;
 	background-color:#CCC;
 }
-
+h2.lineaAmarilla {
+  position: relative;
+  z-index: 1;
+}
+h2.lineaAmarilla:before {
+  border-top: 2px solid #edc018;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
+}
 .float{
 	position:fixed;
 	width:60px;
@@ -128,9 +155,9 @@ body{
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" >
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto menutitle">
+                    <ul class="navbar-nav ml-auto menutitle" style="border-bottom: 2px solid #edc018;">
                         <li class="nav-item">
                             <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/" title="Portada">INICIO</a>
                         </li>
@@ -164,10 +191,14 @@ body{
                             <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/contacto" title="Datos contacto">CONTACTO</a>
                         </li>
                     </ul>
+                    
+                   
 
                    
                 </div>
+               
             </div>
+            
         </nav>
         
 
@@ -190,7 +221,7 @@ window.fbAsyncInit =function(){
 
         <footer>
       
-                <div style="margin-bottom: 5%; margin-top:2%; text-align: left; " class="container bg-secondary"> 
+                <div style="margin-bottom: 5%; margin-top:2%; text-align: left; background:#E0DCDC;" class="container" > 
                 <div class="row">
                 <div class= "container col-lg-4 col-md-12" style="text-align: center;">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -198,7 +229,8 @@ window.fbAsyncInit =function(){
                 </a>  
                 </div>
                 <div class= "col-lg-8"  style="margin-top: 6%;">
-                <h3 style="font-weight: bold;" >Contacto</h3>
+       
+                <h3 style="font-weight: bold; font-family:CaviarDreams_Bold; text-align:left" >Contacto</h3>
                 </div>
                 </div>
 
@@ -207,22 +239,37 @@ window.fbAsyncInit =function(){
                       <div class="col-lg-3 col-md-12">
                                        
                         <ul style="text-align: left;">
-                            <p style="font-weight: bold;" >Dirección</p>
-                            <p>{{$config->direccion}}</p>
-                            <p style="font-weight: bold;" >Horario de Atención</p>
-                            <p>Lunes a Viernes</p>
-                            <p>9.00 - 18.00</p>
-                            <p>Sábados</p>
-                            <p>9.00 - 13.00</p>
+                            <!-- <p style="font-weight: bold;" >Dirección</p>
+                            <p>{{$config->direccion}}</p> -->
+                            <p class="text-center" style="font-weight: bold; font-family:CaviarDreams_Bold;" >Horario de Atención</p>
+                            <p class="text-center" style="font-family:CaviarDreams;" >Lunes a Viernes</p>
+                            <p class="text-center" style="font-family:CaviarDreams;">9.00 - 18.00</p>
+                            <p class="text-center" style="font-family:CaviarDreams;">Sábados</p>
+                            <p class="text-center" style="font-family:CaviarDreams;">9.00 - 13.00</p>
                         </ul>            
                 </div>
                     <div class="col-lg-3">
                       <ul  style="text-align: left;">
-                      <p style="font-weight: bold;" >Teléfono</p><p>+52 {{$config->celular}}</p>
-                      <p style="font-weight: bold;" >Whatsapp</p><p>+52 9981535274</p>
-                      <p style="font-weight: bold;" >email</p><p> {{$config->email}}</p>
+                      <p style="font-family:CaviarDreams;" >Callcenter +52 {{$config->celular}}</p>
+                      <p style="font-family:CaviarDreams;"> Whatsapp   +52 9981535274</p>
+                      
                       </ul> 
                         
+                     
+                    </div>
+                    <!-- style="font-size:1vw; color: black; font-family: Sans-serif;" -->
+                      <div class="col-lg-3" style="">
+                         
+                         <p style="text-align: right; color:black; font-family:CaviarDreams; "><a>Garantías</a></P>                      
+                         <p style="text-align: right; color:black; font-family:CaviarDreams;"><a href="https://contelferraez.com/privacidad/">Términos y condiciones</a></P> 
+                         <p style="text-align: right; color:black; font-family:CaviarDreams;"><a>FAQ</a></P> 
+                        
+                      </div>
+                      <div class="col-lg-3" style="text-align: center;">
+                      <a class="navbar-brand"  href="https://contelferraez.com/">
+                          <img src="https://contelferraez.com/wp-content/themes/lam-contel2/img/logo.png" alt="Logo Artesanías" width="75">
+                      </a>  
+                      <p><a style="font-family:CaviarDreams;">Volver a sitio Contel y Ferraez</a></P>  
                       <div  style="text-align: center;">
                           <a href="https://www.facebook.com/ContelJewelry">
                           <img style= " width: 17%;"src="/img/Logos/facebook.png" alt="">
@@ -234,20 +281,6 @@ window.fbAsyncInit =function(){
                           <img style= "width: 15%;"  src="/img/Logos/whatsapp.png" >
                           </a>                          
                         </div>
-                    </div>
-                    <!-- style="font-size:1vw; color: black; font-family: Sans-serif;" -->
-                      <div class="col-lg-3">
-                         
-                         <p style="text-align: right; color:black; "><a>Garantías</a></P>                      
-                         <p style="text-align: right; color:black;"><a href="https://contelferraez.com/privacidad/">Términos y condiciones</a></P> 
-                         <p style="text-align: right; color:black;"><a>FAQ</a></P> 
-                        
-                      </div>
-                      <div class="col-lg-3" style="text-align: center;">
-                      <a class="navbar-brand"  href="https://contelferraez.com/">
-                          <img src="https://contelferraez.com/wp-content/themes/lam-contel2/img/logo.png" alt="Logo Artesanías" width="150">
-                      </a>  
-                      <p><a>Volver a sitio Contel y Ferraez</a></P>  
                          
                       </div>
                 </div>

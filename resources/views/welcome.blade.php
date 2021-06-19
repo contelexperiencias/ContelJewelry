@@ -225,9 +225,13 @@ h2.linea:before {
   z-index: -1;
 }
 h2.linea span {
+  font-size:25px;
 
   background: #fff;
   padding: 0 15px;
+}
+.w-175 {
+    width: 235%!important;
 }
 @media screen and (max-width:990px){
     #wrapper div {
@@ -245,6 +249,506 @@ h2.linea span {
     } */
 }
 
+
+/* CARD TARJETAS*/
+.section-cards {
+	z-index: 3;
+	position: relative;
+}
+
+.section-gray {
+	background: #e5e5e5;
+	padding: 60px 0 30px 0;
+}
+
+/*---------------------------------------------------------------------- /
+CARDS
+----------------------------------------------------------------------- */
+
+.card {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	margin-bottom: 30px;
+	border-radius: 6px;
+	color: rgba(0, 0, 0, 0.87);
+	background: #E0DCDC;
+	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+		0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card .card-image {
+	height: 60%;
+	position: relative;
+	overflow: hidden;
+	margin-left: 15px;
+	margin-right: 15px;
+	margin-top: -30px;
+	border-radius: 6px;
+	box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+		0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-image img {
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+	pointer-events: none;
+}
+
+.card .card-image .card-caption {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+	color: #fff;
+	font-size: 1.3em;
+	text-shadow: 0 2px 5px rgba(33, 33, 33, 0.5);
+}
+
+.card img {
+	width: 100%;
+	height: auto;
+}
+
+.img-raised {
+	box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+		0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card .ftr {
+	margin-top: 15px;
+}
+
+.card .ftr div {
+	display: inline-block;
+}
+
+.card .ftr .author {
+	color: #888;
+}
+
+.card .ftr .stats {
+	float: right;
+	line-height: 30px;
+}
+
+.card .ftr .stats {
+	position: relative;
+	top: 1px;
+	font-size: 14px;
+}
+
+/* ============ Card Table ============ */
+
+.table {
+	margin-bottom: 0px;
+}
+
+.card .table {
+	padding: 15px 30px;
+}
+
+.card .table-primary {
+	background: linear-gradient(60deg, #ab47bc, #7b1fa2);
+}
+
+.card .table-info {
+	background: linear-gradient(60deg, #26c6da, #0097a7);
+}
+
+.card .table-success {
+	background: linear-gradient(60deg, #66bb6a, #388e3c);
+}
+
+.card .table-warning {
+	background: linear-gradient(60deg, #ffa726, #f57c00);
+}
+
+.card .table-danger {
+	background: linear-gradient(60deg, #ef5350, #d32f2f);
+}
+
+.card .table-rose {
+	background: linear-gradient(60deg, #ec407a, #c2185b);
+}
+
+.card [class*="table-"] {
+	color: #ffffff;
+	border-radius: 6px;
+}
+
+.card [class*="table-"] .card-caption a,
+.card [class*="table-"] .card-caption,
+.card [class*="table-"] .icon i {
+	color: #ffffff;
+}
+
+.card [class*="table-"] .icon i {
+	border-color: rgba(255, 255, 255, 0.25);
+}
+
+.card [class*="table-"] .author a,
+.card [class*="table-"] .ftr .stats,
+.card [class*="table-"] .category,
+.card [class*="table-"] .card-description {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.card [class*="table-"] .author a:hover,
+.card [class*="table-"] .author a:focus,
+.card [class*="table-"] .author a:active {
+	color: #ffffff;
+}
+
+.card [class*="table-"] h1 small,
+.card [class*="table-"] h2 small,
+.card [class*="table-"] h3 small {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+/* ============ Card Blog ============ */
+
+.card-blog {
+	margin-top: 30px;
+}
+
+.card-blog .card-caption {
+	margin-top: 5px;
+}
+
+.card-blog .card-image + .category {
+	margin-top: 20px;
+}
+
+.card-raised {
+	box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+		0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+/* ============ Card Background ============ */
+
+.card-background {
+	background-position: center;
+	background-size: cover;
+	text-align: center;
+}
+
+.card-background .table {
+	position: relative;
+	z-index: 2;
+	min-height: 280px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	max-width: 440px;
+	margin: 0 auto;
+}
+
+.card-background .category,
+.card-background .card-description,
+.card-background small {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.card-background .card-caption {
+	color: #ffffff;
+	margin-top: 10px;
+}
+
+.card-background:after {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: block;
+	left: 0;
+	top: 0;
+	table: "";
+	background-color: rgba(0, 0, 0, 0.56);
+	border-radius: 6px;
+}
+
+/* ============ Card Profile ============ */
+
+.card-profile {
+	margin-top: 30px;
+	text-align: center;
+}
+
+/* ============ Card Category ============ */
+
+.category {
+	position: relative;
+	line-height: 0;
+	margin: 15px 0;
+}
+
+.card .category-social .fa {
+	font-size: 24px;
+	position: relative;
+	margin-top: -4px;
+	top: 2px;
+	margin-right: 5px;
+}
+
+/* ============ Card Author ============ */
+
+.card .author .avatar {
+	width: 36px;
+	height: 36px;
+	overflow: hidden;
+	border-radius: 50%;
+	margin-right: 5px;
+}
+
+.card .author a {
+	color: #333;
+	text-decoration: none;
+}
+
+.card .author a .ripple-cont {
+	display: none;
+}
+
+/* ============ Card Product ============ */
+
+.card-product {
+	margin-top: 30px;
+}
+
+.card-product .btn-simple.btn-just-icon {
+	padding: 0;
+}
+
+.card-product .ftr {
+	margin-top: 5px;
+}
+
+.card-product .ftr .stats {
+	margin-top: 4px;
+	top: 0;
+}
+
+.card-product .ftr h4 {
+	margin-bottom: 0;
+}
+
+.card-product .card-caption,
+.card-product .category,
+.card-product .card-description {
+	text-align: center;
+}
+
+.card-description p {
+	color: #888;
+}
+
+.card-caption,
+.card-caption a {
+	color: #333;
+	text-decoration: none;
+}
+
+.card-caption {
+	font-weight: 700;
+	font-family: "Roboto Slab", "Times New Roman", serif;
+}
+
+/* ============ Card Testimonial ============ */
+
+.card-testimonial {
+	margin-top: 0;
+	margin-bottom: 60px;
+	text-align: center;
+}
+
+.card-profile .btn-just-icon.btn-raised,
+.card-testimonial .btn-just-icon.btn-raised {
+	margin-left: 6px;
+	margin-right: 6px;
+}
+
+.card-profile .card-avatar,
+.card-testimonial .card-avatar {
+	max-width: 130px;
+	max-height: 130px;
+	margin: -50px auto 0;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56),
+		0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.card-profile.card-plain .card-avatar,
+.card-testimonial.card-plain .card-avatar {
+	margin-top: 0;
+}
+
+.card-testimonial .card-avatar {
+	max-width: 100px;
+	max-height: 100px;
+}
+
+.card-testimonial .card-description {
+	font-style: italic;
+}
+
+.card-testimonial .card-description + .card-caption {
+	margin-top: 30px;
+}
+
+.card-testimonial .icon {
+	margin-top: 30px;
+}
+
+.card-testimonial .icon {
+	font-size: 40px;
+}
+
+.card-testimonial .ftr {
+	margin-top: 0;
+}
+
+.card-testimonial .ftr .card-avatar {
+	margin-top: 10px;
+	margin-bottom: -50px;
+}
+
+/* ============ Text Color ============ */
+
+.text-warning {
+	color: #ff9800;
+}
+
+.text-primary {
+	color: #9c27b0;
+}
+
+.text-danger {
+	color: #f44336;
+}
+
+.text-success {
+	color: #4caf50;
+}
+
+.text-info {
+	color: #00bcd4;
+}
+
+.text-rose {
+	color: #e91e63;
+}
+
+.text-gray {
+	color: #888;
+}
+
+/*---------------------------------------------------------------------- /
+BOOTSTRAP COL-MD-12 CLASS
+----------------------------------------------------------------------- */
+
+.col-md-12 {
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+/*---------------------------------------------------------------------- /
+FONT AWESOME FA CLASS
+----------------------------------------------------------------------- */
+
+.fa {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/***********Only4Demo*******************/
+/**************************************/
+
+/* ======= GENERAL  ======= */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4 {
+	/* font-family: "Roboto", "Helvetica", "Arial", sans-serif; */
+	font-weight: 300;
+	line-height: 1.5em;
+}
+
+a {
+	color: #9c27b0;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #9c27b0;
+	text-decoration: underline;
+}
+
+p {
+	color: #000;
+}
+
+header {
+	border-bottom: 1px solid #dedede;
+	text-align: center;
+}
+
+h1,
+.h1 {
+	font-size: 3.8em;
+}
+
+h2,
+.h2 {
+	font-size: 2em;
+	line-height: 1.6em;
+	margin: 15px 0 15px;
+	font-weight: 700;
+	font-family: "Roboto Slab", "Times New Roman", serif;
+	text-align: center;
+}
+
+h3,
+.h3 {
+	font-size: 1.825em;
+	line-height: 1.4em;
+	margin: 30px 0 30px;
+	font-weight: 700;
+	font-family: "Roboto Slab", "Times New Roman", serif;
+	text-align: center;
+}
+
+h4,
+.h4 {
+	font-size: 1.3em;
+	line-height: 1.5em;
+}
+
+h5,
+.h5 {
+	font-size: 1.25em;
+	line-height: 1.5em;
+	margin-bottom: 15px;
+}
+
+h6,
+.h6 {
+	font-size: 0.9em;
+	font-weight: 500;
+}
+
     </style>
 
 <div class="container">
@@ -256,13 +760,13 @@ h2.linea span {
 <div class= "row section">
 <div class= "col-sm-4 articulos" style="background-color:#E0DCDC">
 <div class="article" style=" hight:258px; margin-top: 30px; margin-left: 25px;">
-<p  style="font-family:LemonMilk; font-size: 24px; color:black;">
-¿QUIERES TENER TU PROPIO NEGOCIO DE <strong> JOYERÍA EN ORO LAMINADO?</strong>
+<p  style="font-family:LemonMilk; font-size: 24px;">
+¿QUIERES TENER TU PROPIO NEGOCIO DE <a style="font-weight:700">JOYERÍA EN ORO LAMINADO?</a>
 </p>
 <p class="text-center" style="font-family:LemonMilk; line-height: 1; font-size:14px;">INTÉGRATE A NUESTRO EQUIPO DE</P>
 <P class="text-center" style="font-family:LemonMilk; color:#921B61; line-height: 1; font-size:14px;"><strong>EMPRENDEDORAS</strong></P>
 <P class="text-center" style="font-family:LemonMilk; line-height: 1; font-size:14px;"><strong>¡TE ENSEÑAMOS COMO HACERLO!</strong></p>
-<h2 class="lineaAmarilla" style="bottom: 20px;" ></h2>
+<h2 class="lineaAmarilla" style="bottom: 0px;" ></h2>
 </div>
 <div class="container article" style="background-color:#fff5f630;  margin-top: 10px; margin-bottom: 50px;">
 
@@ -349,7 +853,7 @@ h2.linea span {
 </div>
 <div class= "container">
 <div class="col-sm-10">
-  <h2 class=" linea text-dark text-right" style= "font-family:LemonMilk; font-size:30px;"><span>Tu eliges el tamaño de tu negocio</span></h2>
+  <h2 class=" linea text-dark text-right" style= "font-family:LemonMilk; font-size:25px;"><span>Tu eliges el tamaño de tu negocio</span></h2>
 </div>
 </div>
 <div class= "padre container">
@@ -361,18 +865,43 @@ h2.linea span {
           </div>
         </div>
         <div class= "col-sm-6 articulos" style="">
+        @forelse ($producto as $item)
           <article class="article" style=" ">
-            <img src="/img/carrusel/diamante.png" class="d-block  img-fluid" alt="" style="image-rendering: pixelated;"> 
+          <div class="card card-product" style="font-family:CaviarDreams">
+                            <div class="card-image">
+                                <a href="#"> <img class="img" src="/img/producto/{{$item->urlfoto}}"> </a>
+                            </div>
+                            <div class="table">
+                                <!-- <h6 class="category text-rose">Clothing</h6> -->
+                                <h4 class="card-caption">
+                                  <a style="font-family:CaviarDreams">{{$item->nombre}}</a>
+                                </h4>
+                                <h5 class="card-caption">
+                                  <a style="font-family:CaviarDreams">Invierte</a>
+                                </h5>
+                                <div class="price text-center">
+                                        <h4>${{$item->precio}}</h4>                                       
+                                </div>
+                                <h5 class="card-caption">
+                                  <a style="font-family:CaviarDreams">Gana</a>
+                                </h5>
+                                <div class="price text-center">
+                                        <h4>${{$item->ganancia}}</h4>                                       
+                                </div>
+                                <!-- <div class="card-description"> Lorem ipsum dolor sit amet, consectetur adipis cingelit. Etiam lacinia elit... </div>
+                                <div class="ftr">
+                                    <div class="price">
+                                        <h4>$1,230</h4> </div>
+                                    <div class="stats">
+                                        <button type="button" rel="tooltip" title="" class="btn btn-just-icon btn-simple btn-warning" data-original-title="Saved to Wishlist"> <i class="fa fa-shopping-cart"></i> </button>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
           </article>
-          <article class="article" style=" ">
-            <img src="/img/carrusel/esmeralda.png" class="d-block  img-fluid" alt="" style="image-rendering: pixelated;"> 
-          </article>
-          <article class="article" style=" ">
-            <img src="/img/carrusel/ruby.png" class="d-block  img-fluid" alt="" style="image-rendering: pixelated;"> 
-          </article>
-          <article class="article" style=" ">
-            <img src="/img/carrusel/zafiro.png" class="d-block  img-fluid" alt="" style="image-rendering: pixelated;"> 
-          </article>
+          @empty
+            @endforelse
+         
         </div>
       </div>
    </section> 
@@ -380,36 +909,264 @@ h2.linea span {
 </div>
 
 
-<div class="container">
-@forelse ($posts as $r)
-  
-
-  <div class="row  text-center align-items-center bg-white">
-    <div class="col-sm-6 " style="" >
-      <p style= "font-family:LemonMilk; color:#F07F39;" class="text-center display-4" ><strong>función del cofre</strong><br></p>
-      <p style= "font-family:LemonMilk;" class="text-center display-4"><strong style="color:#E8508A;">¡organiza!</strong><strong style="color:#D0656F;"> ¡Transporta!</strong><strong style="color:#921B61;"> ¡Vende!</strong></p>
-      <p style= "" class="text-center display-4">Creamos cofres en donde podrás 
-exhibir, almacenar y vender joyería en 
-oro laminado de alta calidad de 
-manera organizada y sencilla.</p>
+    <div class="container">
+    @forelse ($posts as $r)
       
+
+      <div class="row  text-center align-items-center bg-white">
+        <div class="col-sm-6 " style="font-size:25px;" >
+          <p style= "font-family:LemonMilk; color:#F07F39; line-height: 2em;" class="text-center" ><strong>función del cofre</strong><br></p>
+          <p style= "font-family:LemonMilk; line-height: 3.5em;" class="text-center "><strong style="color:#E8508A;">¡organiza!</strong><strong style="color:#D0656F;"> ¡Transporta!</strong><strong style="color:#921B61;"> ¡Vende!</strong></p>
+          <p style= "font-family:CaviarDreams_Bold" class="text-left "><strong>Creamos cofres en donde podrás 
+    exhibir, almacenar y vender joyería en 
+    oro laminado de alta calidad de 
+    manera organizada y sencilla.</strong></p>
+          
+        </div>
+        <div id="wrapper" class="col-sm-6 pt-5 pb-5">
+        
+                <img src="/img/producto/cofre-diamante.png" alt="{{$r->nombre}}" class="img-fluid rounded-left">
+        
+        </div>
+        </div>
+        @empty
+                
+            @endforelse
     </div>
-    <div id="wrapper" class="col-sm-6 pt-5 pb-5">
-     
-            <img src="/img/producto/cofre-diamante.png" alt="{{$r->nombre}}" class="img-fluid rounded-left">
-    
+
+
+    <div class= "padre container">
+             <section class="section">
+                 
+                  <div class=" articulos" style="background:black;">
+                  <div class="row"> 
+                  <div class="col-sm-12">      
+                    <div class=" article" style="">
+                    <div class="card mb-3" style="max-width: 540px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
+
     </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+      </div>
     </div>
-    @empty
-            
-         @endforelse
+  </div>
+</div>
+                    </div>  
+                    </div>  
+                    <div class="col-sm-12">                     
+                    <div class="article " style="">
+                    <div class="card">
+        <div class="row no-gutters">
+            <div class="col-auto">
+                <img src="//placehold.it/200" class="img-fluid" alt="">
+            </div>
+            <div class="col">
+                <div class="card-block px-2">
+                    <h4 class="card-title">Title</h4>
+                    <p class="card-text">Description</p>
+                    <a href="#" class="btn btn-primary">BUTTON</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer w-100 text-muted">
+            Footer stating cats are CUTE little animals
+        </div>
+  </div>
+                     
+                    
+                    </div>
+                    </div>            
+                  </div>  
+                </div>  
+              </section>
+    </div>
+
+
+      <div class="container">
+
+          <div class=" row blog col-sm-12 mt-5 mb-5 justify-content-center text-center align-items-center bg-white" style="">
+            <div class="col-sm-6" >
+            </div>
+            <div class="col-sm-6" >
+                <h2 class=" linea text-dark text-right" style="font-family:LemonMilk;"><span>Testimonios</span></h2>    
+            </div>
+
+        @forelse ($testimonios as $r)  
+
+            <div id="" class="col-sm-6">
+              <div id=""  class="col-sm-12" style=" width: auto;";>  
+                <img src="/img/Testimonios/{{$r->urlfoto}}" alt="{{$r->nombre}}" class="img-fluid rounded-left">              
+              </div>       
+            </div>
+            <div class="col-sm-6 text-left" style="font-family:CaviarDreams_Italic" >
+              <div style="font-size:17px; font-family:CaviarDreams_Italic;">            
+                <a style="font-family:CaviarDreams_Italic">{!!$r->descripcion!!} </a>   
+              </div>
+                    <p class="text-black text-left" style="font-family:CaviarDreams_bold"> <br><strong>{{$r->nombre}}</strong></p>
+                    <p class="text-black text-left" style="font-family:CaviarDreams">{{$r->title}} <br></p>             
+            </div>
+            @empty
+            @endforelse
+          </div>
+      </div>
+
+
+
+
+
+
+
+  <div class="container-fluid p-0 container">
+  <div class="col-sm-10">
+  <h2 class=" linea text-dark text-right" style="font-family:LemonMilk;"><span>Lo más reciente de nuestro blog</span></h2>
+
+  </div>
+  <div class="col-sm-2">
+  </div>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            @forelse ($carrusel as $item)
+            <li data-target="#carouselExampleCaptions" data-slide-to="{{$item->orden}}" class="@if($loop->index==0) active @endif"></li>
+            @empty
+            @endforelse
+        </ol>
+        <div class="carousel-inner">
+        @forelse ($carrusel as $item)
+          <div class="carousel-item @if($loop->index==0) active @endif">
+              
+            <img src="/img/post/lienzo.png" class="d-block w-100 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;"> 
+            <div class="row">
+            <div class="col-sm-12 col-xs-12 col-md-12 carousel-caption  carousel-caption-slider pb-5" style="left: 0%!important; top: 5%!important; height: 15%;">
+            <h2 style="font-family: 'Muli', sans-serif; font-weight:bold;">{{$item->encabezado}}</h2>
+            <h4>{{$item->subencabezado}}</h4>
+            </div>
+            </div>
+            <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="left:0%">  
+            <div class= "padre container">
+             <section class="section">
+                <div class="row">  
+                  <div class=" articulos col-sm-6 col-xs-6 col-md-6 col-sm-6with" style="max-width: 50%; top: -183px; left:10%">      
+                    <div class="row article" style="flex-wrap: nowrap;">
+                    <div class="col-sm-4" style="left:3%; top:48px;">
+                    <h6 class="text-black"><a style="color:black; font-family:CaviarDreams_Bold">toma el valor de cambiar tu vida: invierte en ti.</a></h6>
+                    <p> <a style="font-family:CaviarDreams" href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a></p>
+                    </div>
+                    <div class="col-sm-3" style="z-index:1;">
+                    <img src="/img/post/cambia tu vida.jpg" class="mx-auto d-block w-175 width-75  fluid thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 1px solid;">           
+                    </div>
+                    <div class="col-sm-5" style="left: 18%; background: #E5E5E5; bottom: 24px; height: 170px; width:205px;">
+                    <div style="position: relative; top: 27%; left: 5%;">
+                    <h6 class="text-black"><a style="color:black; font-family:CaviarDreams_Italic;">toma el valor de cambiar tu vida: invierte en ti.</a></h6>
+                    </div>
+                    </div>
+                    </div>
+                  </div>  
+                  <div class=" articulos col-sm-6 col-xs-6 col-md-6 col-sm-6with"  style="max-width: 50%">      
+                    <div class="article row" style="flex-wrap: nowrap;">
+                    <div class="col-sm-4" style="top:48px;">
+                    <h6 class="text-black"><a  style="color:black; font-family:CaviarDreams_Bold">toma el valor de cambiar tu vida: invierte en ti.</a></h6>
+                    <p>                    
+                    <a style="font-family:CaviarDreams" href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
+                    </p>
+                    </div>
+                    <div class="col-sm-3" style="z-index:1;" >
+                    <img src="/img/post/cambia tu vida.jpg" class="mx-auto d-block w-175 width-75  fluid  thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 1px solid;">           
+                    </div>
+                    <div class="col-sm-5" style="background: #E5E5E5; left: 18%; bottom: 24px;  height: 170px;">
+                    <div style="position: relative; top: 27%; left: 5%;">
+                    <h6 class="text-black"><a  style="color:black; font-family:CaviarDreams_Italic;">toma el valor de cambiar tu vida: invierte en ti.</a></h6>
+                    </div>
+                    </div>                 
+                    </div>
+                  </div>          
+                </div>  
+              </section>
+              </div>
+            </div>
+
+            <!-- <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+               <div class="col-sm-3 col-xs-3 col-md-3 carousel-caption    ml-auto mr-auto" style="left: 12%!important;">          
+                <img src="/img/carrusel/{{$item->urlfoto1}}" class="mx-auto d-block w-100 width-75  fluid rounded-circle thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 3px solid;">           
+                 <h4>{{$item->title}}</h4>
+                 <h5>{{$item->descripcion}}</h5>
+                 <a href="{{$item->link}}" class="btn btn-light btn-sm btn-radius">VER MÁS</a>
+               </div>
+               <div class="col-sm-3 col-xs-3 col-md-3 carousel-caption  pb-5" style="left: 37%!important;">
+                <img src="/img/carrusel/{{$item->urlfoto2}}" class="mx-auto d-block w-100 width-75 img-fluid rounded-circle thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 3px solid;">
+                <h4>{{$item->title2}}</h4>
+                <h5>{{$item->descripcion2}}</h5>
+                <a href="{{$item->link}}" class="btn btn-light btn-sm btn-radius">VER MÁS</a>
+               </div>
+              <div class="col-sm-3 col-xs-3 col-md-3 carousel-caption  pb-5" style="left: 60%!important;">
+                <img src="/img/carrusel/{{$item->urlfoto3}}" class=" mx-auto d-block w-100 width-75 img-fluid rounded-circle thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 3px solid;">
+                <h4>{{$item->title3}}</h4>
+                <h5>{{$item->descripcion3}}</h5>
+                <a href="{{$item->link}}" class="btn btn-light  btn-sm btn-radius">VER MÁS</a>
+              </div>
+            </div>
+            </div> -->
+          </div>
+        @empty
+        @endforelse
+          
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
 </div>
 
 
 
 
 
-<div class="container" style="margin-top:5%">
+
+
+
+<!-- <div class="container">
+  @forelse ($posts as $r)
+  <div class="col-sm-10">
+  <h2 class=" linea text-dark text-right" style="font-family:LemonMilk;"><span>Lo más reciente de nuestro blog</span></h2>
+
+  </div>
+  <div class="col-sm-2">
+  </div>
+  <div class="row  mt-5 mb-5 justify-content-center text-center align-items-center bg-white">
+    <div class="col-sm-4 " style="left:10%" >
+     <p class="text-black display-4" ><strong>{{$r->nombre}}</strong><br></p>
+      <a href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
+    </div>
+    <div id="wrapper" class="col-sm-8 pt-5 pb-5">
+     <div id="div2"  class="col-sm-12" style="background-color:black; left:25%";> 
+     
+     </div>
+    <div id="div1" class="col-sm-12" style="background-color:revert;" >
+     <div class="col-sm-12 wrapper-div">
+        <img src="/img/post/{{$r->urlfoto}}" alt="{{$r->nombre}}" class="img-fluid rounded-left">
+     </div>               
+                      
+    </div>
+    </div>
+    </div>
+    @empty
+            
+         @endforelse
+</div> -->
+
+<!-- <div class="container" style="margin-top:5%">
     
         <div class="row mb-4 mx-4" >
           <div class="col-sm-6  rounded-right bg-white row align-items-center">
@@ -429,10 +1186,10 @@ manera organizada y sencilla.</p>
         </div>
   
     
-</div>
-
+</div> -->
+<!-- 
 <div class= container>
-<div class="row mt-5 mb-5 justify-content-center text-center align-items-center bg-success">
+  <div class="row mt-5 mb-5 justify-content-center text-center align-items-center bg-success">
         <div class="col-sm-12 bg-white  pt-5 pb-5">
             <div class="row">
             <div class="col-sm-4">
@@ -455,7 +1212,7 @@ manera organizada y sencilla.</p>
                         <p style="text-align: left;">{{$item->porcentaje}}% ganancia</p>
                         <p style="text-align: left;">Precio ${{$item->precio}}</p>
                         <p style="text-align: left;">Ganancia ${{$item->ganancia}} </p>
-                        <!-- <a href="/artesanias/{{$item->categoria->slug}}/{{$item->slug}}" class="btn btn-warning btn-block">{{$item->nombre}}</a> -->
+                        
                     </div>
                 </div>
             @empty
@@ -464,14 +1221,14 @@ manera organizada y sencilla.</p>
         </div>
    
     </div>  
-</div>
+</div> -->
 
 
 
 <!-- artesanias -->
 
-<div class="container">
-@forelse ($posts as $r)
+<!-- <div class="container">
+  @forelse ($posts as $r)
   <div class="col-sm-8">
   <h2 class=" linea text-dark text-right"><span>Lo más reciente de nuestro blog</span></h2>
 
@@ -485,7 +1242,7 @@ manera organizada y sencilla.</p>
     </div>
     <div id="wrapper" class="col-sm-8 pt-5 pb-5">
      <div id="div2"  class="col-sm-12" style="background-color:black; left:25%";> 
-     <!-- <img src="/img/post/por-que-lo-usamos.jpeg" alt="{{$r->nombre}}" class="img-fluid rounded-left">        -->
+    
      </div>
     <div id="div1" class="col-sm-12" style="background-color:revert;" >
      <div class="col-sm-12 wrapper-div">
@@ -498,51 +1255,51 @@ manera organizada y sencilla.</p>
     @empty
             
          @endforelse
-</div>
+</div> -->
 
 <!-- Galeria /-->
 
-<div class= container>
-<nav>
-  <div class="nav nav-tabs" id="nav-tab" role="tablist" style="justify-content: center;">
-    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Pulseras</a>
-    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Dijes</a>
-    <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Cadenas</a>
-    <a class="nav-item nav-link" id="nav-contact2-tab" data-toggle="tab" href="#nav-contact2" role="tab" aria-controls="nav-contact2" aria-selected="false">Aretes</a>
-    <a class="nav-item nav-link" id="nav-anillo-tab" data-toggle="tab" href="#nav-anillo" role="tab" aria-controls="nav-anillo" aria-selected="false">Anillos</a>
-  </div>
-</nav>
-<div class="tab-content" id="nav-tabContent">
-  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-        <div class="demo-gallery">
-        <ul id="lightgallery1" role="tabpanel" class="tab-pane fade show active list-unstyled row">
-        @forelse ($pulceras as $item)
-        <li style="flex: 0 0 33.333333%;" class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="/img/producto/{{$item->urlfoto}}" data-src="/img/producto/{{$item->urlfoto}}" data-sub-html="<h4>{{$item->title}}</h4><p>{{$item->nombre}}</p>">
-             <a href="">
-                <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
-             </a>
-        </li>                         
-        @empty
-            @endforelse
-                               
-            </ul>
-        </div>
-  </div>
-  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-  <div class="demo-gallery">
-  <ul id="lightgallery2" role="tabpanel" class="tab-pane fade show active list-unstyled row">
-  @forelse ($dijes as $item)
-        <li  style="flex: 0 0 33.333333%;" class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="/img/producto/{{$item->urlfoto}}" data-src="/img/producto/{{$item->urlfoto}}" data-sub-html="<h4>{{$item->nombre}}</h4><p>{{$item->nombre}}</p>">
-             <a href="">
-                <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
-             </a>
-        </li>                         
-        @empty
-            @endforelse
-                          
-  </ul>
-  </div>
-  </div>
+<!-- <div class= container>
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist" style="justify-content: center;">
+        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Pulseras</a>
+        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Dijes</a>
+        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Cadenas</a>
+        <a class="nav-item nav-link" id="nav-contact2-tab" data-toggle="tab" href="#nav-contact2" role="tab" aria-controls="nav-contact2" aria-selected="false">Aretes</a>
+        <a class="nav-item nav-link" id="nav-anillo-tab" data-toggle="tab" href="#nav-anillo" role="tab" aria-controls="nav-anillo" aria-selected="false">Anillos</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+            <div class="demo-gallery">
+            <ul id="lightgallery1" role="tabpanel" class="tab-pane fade show active list-unstyled row">
+            @forelse ($pulceras as $item)
+            <li style="flex: 0 0 33.333333%;" class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="/img/producto/{{$item->urlfoto}}" data-src="/img/producto/{{$item->urlfoto}}" data-sub-html="<h4>{{$item->title}}</h4><p>{{$item->nombre}}</p>">
+                <a href="">
+                    <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
+                </a>
+            </li>                         
+            @empty
+                @endforelse
+                                  
+                </ul>
+            </div>
+      </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="demo-gallery">
+    <ul id="lightgallery2" role="tabpanel" class="tab-pane fade show active list-unstyled row">
+    @forelse ($dijes as $item)
+          <li  style="flex: 0 0 33.333333%;" class="col-xs-6 col-sm-4 col-md-2 col-lg-2" data-responsive="/img/producto/{{$item->urlfoto}}" data-src="/img/producto/{{$item->urlfoto}}" data-sub-html="<h4>{{$item->nombre}}</h4><p>{{$item->nombre}}</p>">
+              <a href="">
+                  <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
+              </a>
+          </li>                         
+          @empty
+              @endforelse
+                            
+    </ul>
+    </div>
+    </div>
   <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
     <div class="demo-gallery">
         <ul id="lightgallery3" role="tabpanel" class="tab-pane fade show active list-unstyled row">
@@ -587,139 +1344,137 @@ manera organizada y sencilla.</p>
   </div>
 </div>
 
-</div>
+</div> -->
 
         
 
 
-<div class="container">
+<!-- <div class="container">
 
     <div class=" row blog col-sm-12 mt-5 mb-5 justify-content-center text-center align-items-center bg-white" style="border: ridge;">
-    @forelse ($testimonios as $r)  
-        <div id="wrapper" class="col-sm-8 pt-5 pb-5">
-            <div id="div2"  class="col-sm-12" style="background-color:black";>
-            <!-- <img src= "/img/post/por-que-lo-usamos.jpeg" alt="{{$r->nombre}}" class="img-fluid rounded-left"> -->
+        @forelse ($testimonios as $r)  
+            <div id="wrapper" class="col-sm-8 pt-5 pb-5">
+                <div id="div2"  class="col-sm-12" style="background-color:black";>
+                
+                </div>
+                <div id="div1" class="col-sm-12" style="background-color:revert;" >
+                            <a href="/bele/{{$item->categoria->slug}}/{{$item->slug}}">
+                            <img src="/img/Testimonios/{{$r->urlfoto}}" alt="{{$r->nombre}}" class="img-fluid rounded-left">
+                            
+                                   
+                                </a>
+                </div>
+              
             </div>
-            <div id="div1" class="col-sm-12" style="background-color:revert;" >
-                        <a href="/bele/{{$item->categoria->slug}}/{{$item->slug}}">
-                        <img src="/img/Testimonios/{{$r->urlfoto}}" alt="{{$r->nombre}}" class="img-fluid rounded-left">
-                        
-                                <!-- <img src="/img/producto/{{$item->urlfoto}}" class="card-img-top" alt="{{$item->nombre}}"> -->
-                            </a>
-            </div>
-           
-        </div>
-        <div class="col-sm-4" >
-        <h2 class=" linea text-dark text-center"><span>Testimonios</span></h2>
-      
-        {!!$r->descripcion!!}   
-      
-        <p class="text-black"> <br>{{$r->nombre}}</p>
-        <p class="font-anton text-black">{{$r->title}} <br></p>
-        @empty
-            @endforelse
-        </div>
-    </div>
-</div>
-<div class="container">
-<!-- Modal gallery -->
-<section class="">
-  <!-- Section: Images -->
-  <section class="">
-    <div class="row">
-    @forelse ($carrusel as $item)
-    <div style="flex: 0 0 50%;" class="col-lg-3 col-md-12 mb-3 mb-lg-0">
-        <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
-          <img src="/img/carrusel/{{$item->urlfoto}}" class="w-100"/>
-          <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
-          <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
-          </a>
-        </div>
-      </div>
-
-     
-    @empty
-    @endforelse  
-
- 
-
-    </div>
-  </section>
-  <!-- Section: Images -->
-
-  <!-- Section: Modals -->
-  <section class="">
-    <!-- Modal 1 -->
-    <div
-      class="modal fade"
-      id="exampleModal1"
-      tabindex="-1"
-      aria-labelledby="exampleModal1Label"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="ratio ratio-16x9">
-          
-          </div>
-
-          <div class="text-center py-3">
-            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 2 -->
-    <div
-      class="modal fade"
-      id="exampleModal2"
-      tabindex="-1"
-      aria-labelledby="exampleModal2Label"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="ratio ratio-16x9">
-           
-          </div>
-
-          <div class="text-center py-3">
-            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal 3 -->
-    <div
-      class="modal fade"
-      id="exampleModal3"
-      tabindex="-1"
-      aria-labelledby="exampleModal3Label"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-          <div class="ratio ratio-16x9">
+            <div class="col-sm-4" >
+              <h2 class=" linea text-dark text-center"><span>Testimonios</span></h2>
             
+              {!!$r->descripcion!!}   
+            
+              <p class="text-black"> <br>{{$r->nombre}}</p>
+              <p class="font-anton text-black">{{$r->title}} <br></p>
+              @empty
+                  @endforelse
+            </div>
+    </div>
+</div> -->
+<!-- <div class="container">
+
+    <section class="">
+      
+      <section class="">
+        <div class="row">
+        @forelse ($carrusel as $item)
+        <div style="flex: 0 0 50%;" class="col-lg-3 col-md-12 mb-3 mb-lg-0">
+            <div class="bg-image hover-overlay ripple shadow-1-strong rounded" data-ripple-color="light">
+              <img src="/img/carrusel/{{$item->urlfoto}}" class="w-100"/>
+              <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+              <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+            </div>
           </div>
 
-          <div class="text-center py-3">
-            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-              Close
-            </button>
+        
+        @empty
+        @endforelse  
+
+    
+
+        </div>
+    </section>
+      
+    <section class="">
+   
+        <div
+          class="modal fade"
+          id="exampleModal1"
+          tabindex="-1"
+          aria-labelledby="exampleModal1Label"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="ratio ratio-16x9">
+              
+              </div>
+
+              <div class="text-center py-3">
+                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- Section: Modals -->
-</section>
-<!-- Modal gallery -->
-</div>
+      
+        <div
+          class="modal fade"
+          id="exampleModal2"
+          tabindex="-1"
+          aria-labelledby="exampleModal2Label"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="ratio ratio-16x9">
+              
+              </div>
+
+              <div class="text-center py-3">
+                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div
+          class="modal fade"
+          id="exampleModal3"
+          tabindex="-1"
+          aria-labelledby="exampleModal3Label"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="ratio ratio-16x9">
+                
+              </div>
+
+              <div class="text-center py-3">
+                <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+ 
+    </section>
+
+</div> -->
 
 <!-- artesanias /-->
 
