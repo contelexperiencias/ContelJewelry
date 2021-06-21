@@ -17,15 +17,17 @@ class FrontController extends Controller
     public function index(){
         $carrusel = Carrusel::orderBy('orden','asc')->get();
         $producto = Producto::orderBy('visitas','desc')->take(4)->get();
-        $posts = Post::orderBy('created_at','desc')->take(1)->get();    
+        $posts = Post::orderBy('created_at','desc')->get();    
         $pulceras = Producto::where('categoria_id','9')->get();
         $dijes = Producto::where('categoria_id','10')->get();
         $cadenas = Producto::where('categoria_id','11')->get();
         $aretes = Producto::where('categoria_id','12')->get();
         $anillos = Producto::where('categoria_id','13')->get();
         $testimonios = testimonio::orderBy('created_at','desc')->take(1)->get(); 
+        $cont2 =0;
+        $cont =0;
         
-        return view('welcome',compact('carrusel','producto','posts', 'pulceras','dijes','cadenas','aretes','anillos','testimonios'));
+        return view('welcome',compact('carrusel','producto','posts', 'pulceras','dijes','cadenas','aretes','anillos','testimonios','cont2','cont'));
     }
 
     public function empresa(){

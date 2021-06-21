@@ -10,7 +10,7 @@
 .padre{
   display:flex;
   flex-flow:column nowrap;
-  
+
 }
   .section{
     display:flex;
@@ -33,12 +33,12 @@
     #wrapper {
         position:relative;
     }
- 
+
     #wrapper>div {
         width:430px;
         height:220px;
     }
- 
+
     #div1 {
         background-color:Red;
     }
@@ -48,7 +48,7 @@
         top: 4%;
         left: 30%;
     }
-      
+
     #principal li {
    display:inline;
    float:left;
@@ -70,7 +70,7 @@
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     grid-gap: 1em;
   }
-  
+
   .article {
     padding: 1em;
     /* background: #71D7E4;
@@ -79,10 +79,10 @@
       0 20px 20px rgba(0, 0, 0, 0.05); */
   }
 
- 
 
 
-.demo-gallery > ul > li a { 
+
+.demo-gallery > ul > li a {
   border: 3px solid #FFF;
   border-radius: 3px;
   display: block;
@@ -185,7 +185,7 @@
   border: 3px solid #04070a;
 }
 .home .demo-gallery {
-  padding-bottom: 80px; 
+  padding-bottom: 80px;
 }
 h2 {
   font: 33px sans-serif;
@@ -771,7 +771,7 @@ h6,
 <div class="container article" style="background-color:#fff5f630;  margin-top: 10px; margin-bottom: 50px;">
 
 <form  style=" margin-top: 10px; padding-top: 1px;" action="/contacto" method="post">
-              
+
 <div class="form-group" >
   <div style="margin-top: 30px;">
 <p class="text-center" style="font-family:LemonMilk; line-height: 1; font-size:14px;">¡QUIERO SER <strong>EMPRENDEDORA!</strong></P>
@@ -779,16 +779,16 @@ h6,
                   <input style="font-family:LemonMilk; background-color: #D0656F30;" type="text" class="form-control" name="nombre" id="nombre" placeholder="NOMBRE:">
                 </div>
               <div class="form-group">
-               
+
                 <input style="font-family:LemonMilk; background-color: #D0656F30;" type="email" class="form-control" name="email" id="email" placeholder="Email:">
               </div>
-            
-             
-              
+
+
+
               <div class="form-group">
-               
+
                 <input style="font-family:LemonMilk; background-color: #D0656F30;" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" type="tel" class="form-control" id="phone" name="phone" placeholder="TELÉFONO:">
-               
+
               </div>
               <div class="text-center">
 
@@ -803,33 +803,32 @@ h6,
     </div>
     <div class="publico">
     <div class="container-fluid p-0">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             @forelse ($carrusel as $item)
             <li data-target="#carouselExampleCaptions" data-slide-to="{{$item->orden}}" class="@if($loop->index==0) active @endif"></li>
             @empty
             @endforelse
         </ol>
-        <div class="carousel-inner">
-        @forelse ($carrusel as $item)
-          <div class="carousel-item @if($loop->index==0) active @endif">
-              
-            <img src="/img/carrusel/{{$item->urlfoto}}" class="d-block w-100 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;"> 
+          <div class="carousel-inner">
+           @forelse ($carrusel as $item)
+            <div class="carousel-item @if($loop->index==0) active @endif">
+              <img src="/img/carrusel/{{$item->urlfoto}}" class="d-block w-100 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;">
             <div class="row">
             <div class="col-sm-12 col-xs-12 col-md-12 carousel-caption  carousel-caption-slider pb-5" style="left: 0%!important; top: 5%!important; height: 15%;">
             <h2 style="font-family: 'Muli', sans-serif; font-weight:bold;">{{$item->encabezado}}</h2>
             <h4>{{$item->subencabezado}}</h4>
             </div>
             </div>
-            <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="left:24%">  
-         
+            <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="left:24%">
+
             </div>
 
-        
+
           </div>
         @empty
         @endforelse
-          
+
         </div>
         <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -861,7 +860,7 @@ h6,
     <div class= "row ">
         <div class= "col-sm-6 articulos" style="">
           <div class="article" style=" ">
-            <img src="/img/carrusel/chicamaletin.png" class="d-block w-100 img-fluid" alt="" style="image-rendering: pixelated;"> 
+            <img src="/img/carrusel/chicamaletin.png" class="d-block w-100 img-fluid" alt="" style="image-rendering: pixelated;">
           </div>
         </div>
         <div class= "col-sm-6 articulos" style="">
@@ -880,13 +879,13 @@ h6,
                                   <a style="font-family:CaviarDreams">Invierte</a>
                                 </h5>
                                 <div class="price text-center">
-                                        <h4>${{$item->precio}}</h4>                                       
+                                        <h4>${{$item->precio}}</h4>
                                 </div>
                                 <h5 class="card-caption">
                                   <a style="font-family:CaviarDreams">Gana</a>
                                 </h5>
                                 <div class="price text-center">
-                                        <h4>${{$item->ganancia}}</h4>                                       
+                                        <h4>${{$item->ganancia}}</h4>
                                 </div>
                                 <!-- <div class="card-description"> Lorem ipsum dolor sit amet, consectetur adipis cingelit. Etiam lacinia elit... </div>
                                 <div class="ftr">
@@ -901,91 +900,39 @@ h6,
           </article>
           @empty
             @endforelse
-         
+
         </div>
       </div>
-   </section> 
+   </section>
 </div>
 </div>
 
 
     <div class="container">
-    @forelse ($posts as $r)
-      
+
+
 
       <div class="row  text-center align-items-center bg-white">
         <div class="col-sm-6 " style="font-size:25px;" >
           <p style= "font-family:LemonMilk; color:#F07F39; line-height: 2em;" class="text-center" ><strong>función del cofre</strong><br></p>
           <p style= "font-family:LemonMilk; line-height: 3.5em;" class="text-center "><strong style="color:#E8508A;">¡organiza!</strong><strong style="color:#D0656F;"> ¡Transporta!</strong><strong style="color:#921B61;"> ¡Vende!</strong></p>
-          <p style= "font-family:CaviarDreams_Bold" class="text-left "><strong>Creamos cofres en donde podrás 
-    exhibir, almacenar y vender joyería en 
-    oro laminado de alta calidad de 
+          <p style= "font-family:CaviarDreams_Bold" class="text-left "><strong>Creamos cofres en donde podrás
+    exhibir, almacenar y vender joyería en
+    oro laminado de alta calidad de
     manera organizada y sencilla.</strong></p>
-          
+
         </div>
         <div id="wrapper" class="col-sm-6 pt-5 pb-5">
-        
-                <img src="/img/producto/cofre-diamante.png" alt="{{$r->nombre}}" class="img-fluid rounded-left">
-        
+
+                <img src="/img/producto/cofre-diamante.png" alt="" class="img-fluid rounded-left">
+
         </div>
         </div>
-        @empty
-                
-            @endforelse
+  
     </div>
 
 
-    <div class= "padre container">
-             <section class="section">
-                 
-                  <div class=" articulos" style="background:black;">
-                  <div class="row"> 
-                  <div class="col-sm-12">      
-                    <div class=" article" style="">
-                    <div class="card mb-3" style="max-width: 540px;">
-  <div class="row no-gutters">
-    <div class="col-md-4">
-      <svg class="bd-placeholder-img" width="100%" height="250" xmlns="http://www.w3.org/2000/svg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg>
-
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
-        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
-                    </div>  
-                    </div>  
-                    <div class="col-sm-12">                     
-                    <div class="article " style="">
-                    <div class="card">
-        <div class="row no-gutters">
-            <div class="col-auto">
-                <img src="//placehold.it/200" class="img-fluid" alt="">
-            </div>
-            <div class="col">
-                <div class="card-block px-2">
-                    <h4 class="card-title">Title</h4>
-                    <p class="card-text">Description</p>
-                    <a href="#" class="btn btn-primary">BUTTON</a>
-                </div>
-            </div>
-        </div>
-        <div class="card-footer w-100 text-muted">
-            Footer stating cats are CUTE little animals
-        </div>
-  </div>
-                     
-                    
-                    </div>
-                    </div>            
-                  </div>  
-                </div>  
-              </section>
-    </div>
+             
 
 
       <div class="container">
@@ -994,22 +941,22 @@ h6,
             <div class="col-sm-6" >
             </div>
             <div class="col-sm-6" >
-                <h2 class=" linea text-dark text-right" style="font-family:LemonMilk;"><span>Testimonios</span></h2>    
+                <h2 class=" linea text-dark text-right" style="font-family:LemonMilk;"><span>Testimonios</span></h2>
             </div>
 
-        @forelse ($testimonios as $r)  
+        @forelse ($testimonios as $r)
 
             <div id="" class="col-sm-6">
-              <div id=""  class="col-sm-12" style=" width: auto;";>  
-                <img src="/img/Testimonios/{{$r->urlfoto}}" alt="{{$r->nombre}}" class="img-fluid rounded-left">              
-              </div>       
+              <div id=""  class="col-sm-12" style=" width: auto;";>
+                <img src="/img/Testimonios/{{$r->urlfoto}}" alt="{{$r->nombre}}" class="img-fluid rounded-left">
+              </div>
             </div>
             <div class="col-sm-6 text-left" style="font-family:CaviarDreams_Italic" >
-              <div style="font-size:17px; font-family:CaviarDreams_Italic;">            
-                <a style="font-family:CaviarDreams_Italic">{!!$r->descripcion!!} </a>   
+              <div style="font-size:17px; font-family:CaviarDreams_Italic;">
+                <a style="font-family:CaviarDreams_Italic">{!!$r->descripcion!!} </a>
               </div>
                     <p class="text-black text-left" style="font-family:CaviarDreams_bold"> <br><strong>{{$r->nombre}}</strong></p>
-                    <p class="text-black text-left" style="font-family:CaviarDreams">{{$r->title}} <br></p>             
+                    <p class="text-black text-left" style="font-family:CaviarDreams">{{$r->title}} <br></p>
             </div>
             @empty
             @endforelse
@@ -1017,7 +964,56 @@ h6,
       </div>
 
 
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+  @for ($i = 0; $i < 3; $i++)
+    <li data-target="#carouselExampleIndicators" data-slide-to="{{$i}}" class="active"></li>
+    @endfor
+  </ol>
+  <div class="carousel-inner">
+  @for ($i = 0; $i < 3; $i++)
+    <div class="carousel-item active">
+      <img src="{{}}..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="..." class="d-block w-100" alt="...">
+    </div>
+    @endfor
 
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+      @for ($i = 0; $i < 3; $i++)
+      <p class="d-none">{!!$cont = $cont+2!!}</p>
+      @for($a = $cont2; $a < $cont; $a++ )
+      @if($a < count($posts))
+      {{$posts[$a]['nombre']}}
+      @endif
+      @endfor
+      <p class="d-none">{!!$cont2 = $cont2+2!!}</p>
+    
+      @endfor
 
 
 
@@ -1039,61 +1035,92 @@ h6,
         <div class="carousel-inner">
         @forelse ($carrusel as $item)
           <div class="carousel-item @if($loop->index==0) active @endif">
-              
-            <img src="/img/post/lienzo.png" class="d-block w-100 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;"> 
+
+            <img src="/img/post/lienzo.png" class="d-block w-100 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;">
             <div class="row">
             <div class="col-sm-12 col-xs-12 col-md-12 carousel-caption  carousel-caption-slider pb-5" style="left: 0%!important; top: 5%!important; height: 15%;">
             <h2 style="font-family: 'Muli', sans-serif; font-weight:bold;">{{$item->encabezado}}</h2>
             <h4>{{$item->subencabezado}}</h4>
             </div>
             </div>
-            <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="left:0%">  
+            <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="text-align:left; left:0%">
             <div class= "padre container">
-             <section class="section">
-                <div class="row">  
-                  <div class=" articulos col-sm-6 col-xs-6 col-md-6 col-sm-6with" style="max-width: 50%; top: -183px; left:10%">      
-                    <div class="row article" style="flex-wrap: nowrap;">
-                    <div class="col-sm-4" style="left:3%; top:48px;">
-                    <h6 class="text-black"><a style="color:black; font-family:CaviarDreams_Bold">toma el valor de cambiar tu vida: invierte en ti.</a></h6>
-                    <p> <a style="font-family:CaviarDreams" href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a></p>
+              <section class="section">
+                  <div class=" articulos" style="background:white;">
+                    <div class="row">
+                      <div class="col-sm-12">
+                       <div class=" article" style="">
+                          <div class="card" style=" line-height: 1.2em; box-shadow: 0 0px; max-width: 540px; background: white; border:0px;">
+                            <div class="row no-gutters">
+                              <div class="col-md-3" style="background: white; left: 3%; top: 38px; bottom: 0px; height: 137px;">
+                                <div class="card-body">
+                                  <!-- <h5 class="card-title">Card title</h5> -->
+                                  <!-- <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p> -->
+                                  <p class="card-text" style="font-family:CaviarDreams_Bold"><small class="card-text">Toma el valor de cambiar tu vida: invierte en ti.</small></p>
+                                  <p>
+                                  <a style="font-family:CaviarDreams; padding-top: 0px; padding-bottom: 0px;" href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="col-md-4" style="bottom: 0px; top: 25px; left: 3%;  z-index: 1;">
+                                <img src="/img/post/cambia tu vida.jpg" >
+                                  <!-- <svg class="bd-placeholder-img" width="100%" height="250" xmlns="/img/post/cambia tu vida.jpg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg> -->
+
+                              </div>
+                              <div class="col-md-5" style=" background: #E5E5E5; left: 0%; height: 157px;">
+                                <div class="card-body">
+                                  <!-- <h5 class="card-title">Card title</h5> -->
+                                  <p class="card-text" style="font-family:CaviarDreams_Italic">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+                                  <p class="card-text"><small class="text-muted"></small></p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                       </div>
+                      </div>
+
+
+                      <div class="col-sm-12" style="text-align:right;">
+                        <div class=" article" style="">
+                            <div class="card" style=" line-height: 1.2em; box-shadow: 0 0px; max-width: 540px; background: white; border:0px;">
+                              <div class="row no-gutters">
+                                <div class="col-md-3" style="background: white; left: 3%; top: 38px; bottom: 0px; height: 137px;">
+                                  <div class="card-body">
+                                    <!-- <h5 class="card-title">Card title</h5> -->
+                                    <!-- <p class="card-text">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p> -->
+                                    <p class="card-text" style="font-family:CaviarDreams_Bold"><small class="card-text">Toma el valor de cambiar tu vida: invierte en ti.</small></p>
+                                    <p>
+                                    <a style="font-family:CaviarDreams; padding-top: 0px; padding-bottom: 0px;" href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="col-md-4" style="bottom: 0px; top: 25px; left: 3%;  z-index: 1;">
+                                  <img src="/img/post/cambia tu vida.jpg" >
+                                    <!-- <svg class="bd-placeholder-img" width="100%" height="250" xmlns="/img/post/cambia tu vida.jpg" aria-label="Placeholder: Image" preserveAspectRatio="xMidYMid slice" role="img"><title>Placeholder</title><rect width="100%" height="100%" fill="#868e96"/><text x="50%" y="50%" fill="#dee2e6" dy=".3em">Image</text></svg> -->
+
+                                </div>
+                                <div class="col-md-5" style=" background: #E5E5E5; left: 0%; height: 157px;">
+                                  <div class="card-body">
+                                    <!-- <h5 class="card-title">Card title</h5> -->
+                                    <p class="card-text" style="font-family:CaviarDreams_Italic">It's a broader card with text below as a natural lead-in to extra content. This content is a little longer.</p>
+                                    <p class="card-text"><small class="text-muted"></small></p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-sm-3" style="z-index:1;">
-                    <img src="/img/post/cambia tu vida.jpg" class="mx-auto d-block w-175 width-75  fluid thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 1px solid;">           
-                    </div>
-                    <div class="col-sm-5" style="left: 18%; background: #E5E5E5; bottom: 24px; height: 170px; width:205px;">
-                    <div style="position: relative; top: 27%; left: 5%;">
-                    <h6 class="text-black"><a style="color:black; font-family:CaviarDreams_Italic;">toma el valor de cambiar tu vida: invierte en ti.</a></h6>
-                    </div>
-                    </div>
-                    </div>
-                  </div>  
-                  <div class=" articulos col-sm-6 col-xs-6 col-md-6 col-sm-6with"  style="max-width: 50%">      
-                    <div class="article row" style="flex-wrap: nowrap;">
-                    <div class="col-sm-4" style="top:48px;">
-                    <h6 class="text-black"><a  style="color:black; font-family:CaviarDreams_Bold">toma el valor de cambiar tu vida: invierte en ti.</a></h6>
-                    <p>                    
-                    <a style="font-family:CaviarDreams" href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
-                    </p>
-                    </div>
-                    <div class="col-sm-3" style="z-index:1;" >
-                    <img src="/img/post/cambia tu vida.jpg" class="mx-auto d-block w-175 width-75  fluid  thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 1px solid;">           
-                    </div>
-                    <div class="col-sm-5" style="background: #E5E5E5; left: 18%; bottom: 24px;  height: 170px;">
-                    <div style="position: relative; top: 27%; left: 5%;">
-                    <h6 class="text-black"><a  style="color:black; font-family:CaviarDreams_Italic;">toma el valor de cambiar tu vida: invierte en ti.</a></h6>
-                    </div>
-                    </div>                 
-                    </div>
-                  </div>          
-                </div>  
-              </section>
-              </div>
+                  </div>
+               </section>
+             </div>
+         
             </div>
 
             <!-- <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">
-               <div class="col-sm-3 col-xs-3 col-md-3 carousel-caption    ml-auto mr-auto" style="left: 12%!important;">          
-                <img src="/img/carrusel/{{$item->urlfoto1}}" class="mx-auto d-block w-100 width-75  fluid rounded-circle thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 3px solid;">           
+               <div class="col-sm-3 col-xs-3 col-md-3 carousel-caption    ml-auto mr-auto" style="left: 12%!important;">
+                <img src="/img/carrusel/{{$item->urlfoto1}}" class="mx-auto d-block w-100 width-75  fluid rounded-circle thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 3px solid;">
                  <h4>{{$item->title}}</h4>
                  <h5>{{$item->descripcion}}</h5>
                  <a href="{{$item->link}}" class="btn btn-light btn-sm btn-radius">VER MÁS</a>
@@ -1115,9 +1142,9 @@ h6,
           </div>
         @empty
         @endforelse
-          
+
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev" style="z-index: 50;">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="sr-only">Previous</span>
         </a>
@@ -1150,24 +1177,24 @@ h6,
       <a href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
     </div>
     <div id="wrapper" class="col-sm-8 pt-5 pb-5">
-     <div id="div2"  class="col-sm-12" style="background-color:black; left:25%";> 
-     
+     <div id="div2"  class="col-sm-12" style="background-color:black; left:25%";>
+
      </div>
     <div id="div1" class="col-sm-12" style="background-color:revert;" >
      <div class="col-sm-12 wrapper-div">
         <img src="/img/post/{{$r->urlfoto}}" alt="{{$r->nombre}}" class="img-fluid rounded-left">
-     </div>               
-                      
+     </div>
+
     </div>
     </div>
     </div>
     @empty
-            
+
          @endforelse
 </div> -->
 
 <!-- <div class="container" style="margin-top:5%">
-    
+
         <div class="row mb-4 mx-4" >
           <div class="col-sm-6  rounded-right bg-white row align-items-center">
                 <div class="col-sm-12 card bg-light" style="text-align: left; height: 272px;">
@@ -1175,19 +1202,19 @@ h6,
                     <p>{{$config->frase_1}}</p>
                 </div>
            </div>
-          
+
            <div class="col-sm-6  rounded-right bg-white row align-items-center">
                 <div class="col-sm-12 card  bg-light" style="text-align: right; height: 272px;">
                     <h3 class="text-black">Contel Jewelry</h3>
                     <p>{{$config->frase_2}}</p>
-                    
+
                 </div>
             </div>
         </div>
-  
-    
+
+
 </div> -->
-<!-- 
+<!--
 <div class= container>
   <div class="row mt-5 mb-5 justify-content-center text-center align-items-center bg-success">
         <div class="col-sm-12 bg-white  pt-5 pb-5">
@@ -1199,28 +1226,28 @@ h6,
             </div>
             @forelse ($producto as $item)
                 <div class="col-sm-3">
-                    <div class="card" style="background-color:#d8d3d3";>                
+                    <div class="card" style="background-color:#d8d3d3";>
                     <div class="container">
                     <a href="/bele/{{$item->categoria->slug}}/{{$item->slug}}">
                             <img src="/img/producto/{{$item->urlfoto}}" class="card-img-top" alt="{{$item->nombre}}">
                         </a>
                     </div>
-                       
+
                     </div>
                     <div class="card-footer"  style="background-color:#d8d3d3">
                         <p style="text-align: left;">{{$item->nombre}}</p>
                         <p style="text-align: left;">{{$item->porcentaje}}% ganancia</p>
                         <p style="text-align: left;">Precio ${{$item->precio}}</p>
                         <p style="text-align: left;">Ganancia ${{$item->ganancia}} </p>
-                        
+
                     </div>
                 </div>
             @empty
             @endforelse
             </div>
         </div>
-   
-    </div>  
+
+    </div>
 </div> -->
 
 
@@ -1241,19 +1268,19 @@ h6,
       <a href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
     </div>
     <div id="wrapper" class="col-sm-8 pt-5 pb-5">
-     <div id="div2"  class="col-sm-12" style="background-color:black; left:25%";> 
-    
+     <div id="div2"  class="col-sm-12" style="background-color:black; left:25%";>
+
      </div>
     <div id="div1" class="col-sm-12" style="background-color:revert;" >
      <div class="col-sm-12 wrapper-div">
         <img src="/img/post/{{$r->urlfoto}}" alt="{{$r->nombre}}" class="img-fluid rounded-left">
-     </div>               
-                      
+     </div>
+
     </div>
     </div>
     </div>
     @empty
-            
+
          @endforelse
 </div> -->
 
@@ -1278,10 +1305,10 @@ h6,
                 <a href="">
                     <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
                 </a>
-            </li>                         
+            </li>
             @empty
                 @endforelse
-                                  
+
                 </ul>
             </div>
       </div>
@@ -1293,10 +1320,10 @@ h6,
               <a href="">
                   <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
               </a>
-          </li>                         
+          </li>
           @empty
               @endforelse
-                            
+
     </ul>
     </div>
     </div>
@@ -1308,7 +1335,7 @@ h6,
              <a href="">
                 <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
              </a>
-        </li>                         
+        </li>
         @empty
             @endforelse
                     </ul>
@@ -1322,7 +1349,7 @@ h6,
              <a href="">
                 <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
              </a>
-        </li>                         
+        </li>
         @empty
             @endforelse
         </ul>
@@ -1336,7 +1363,7 @@ h6,
              <a href="">
                 <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
              </a>
-        </li>                         
+        </li>
         @empty
             @endforelse
         </ul>
@@ -1346,31 +1373,31 @@ h6,
 
 </div> -->
 
-        
+
 
 
 <!-- <div class="container">
 
     <div class=" row blog col-sm-12 mt-5 mb-5 justify-content-center text-center align-items-center bg-white" style="border: ridge;">
-        @forelse ($testimonios as $r)  
+        @forelse ($testimonios as $r)
             <div id="wrapper" class="col-sm-8 pt-5 pb-5">
                 <div id="div2"  class="col-sm-12" style="background-color:black";>
-                
+
                 </div>
                 <div id="div1" class="col-sm-12" style="background-color:revert;" >
                             <a href="/bele/{{$item->categoria->slug}}/{{$item->slug}}">
                             <img src="/img/Testimonios/{{$r->urlfoto}}" alt="{{$r->nombre}}" class="img-fluid rounded-left">
-                            
-                                   
+
+
                                 </a>
                 </div>
-              
+
             </div>
             <div class="col-sm-4" >
               <h2 class=" linea text-dark text-center"><span>Testimonios</span></h2>
-            
-              {!!$r->descripcion!!}   
-            
+
+              {!!$r->descripcion!!}
+
               <p class="text-black"> <br>{{$r->nombre}}</p>
               <p class="font-anton text-black">{{$r->title}} <br></p>
               @empty
@@ -1381,7 +1408,7 @@ h6,
 <!-- <div class="container">
 
     <section class="">
-      
+
       <section class="">
         <div class="row">
         @forelse ($carrusel as $item)
@@ -1394,17 +1421,17 @@ h6,
             </div>
           </div>
 
-        
-        @empty
-        @endforelse  
 
-    
+        @empty
+        @endforelse
+
+
 
         </div>
     </section>
-      
+
     <section class="">
-   
+
         <div
           class="modal fade"
           id="exampleModal1"
@@ -1415,7 +1442,7 @@ h6,
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="ratio ratio-16x9">
-              
+
               </div>
 
               <div class="text-center py-3">
@@ -1426,7 +1453,7 @@ h6,
             </div>
           </div>
         </div>
-      
+
         <div
           class="modal fade"
           id="exampleModal2"
@@ -1437,7 +1464,7 @@ h6,
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="ratio ratio-16x9">
-              
+
               </div>
 
               <div class="text-center py-3">
@@ -1448,7 +1475,7 @@ h6,
             </div>
           </div>
         </div>
-        
+
         <div
           class="modal fade"
           id="exampleModal3"
@@ -1459,7 +1486,7 @@ h6,
           <div class="modal-dialog modal-lg">
             <div class="modal-content">
               <div class="ratio ratio-16x9">
-                
+
               </div>
 
               <div class="text-center py-3">
@@ -1471,7 +1498,7 @@ h6,
           </div>
         </div>
       </section>
- 
+
     </section>
 
 </div> -->
@@ -1485,15 +1512,15 @@ h6,
 <script>
 
             $(document).ready(function(){
-                          
-                $('#lightgallery1').lightGallery(); 
-                $('#lightgallery2').lightGallery(); 
-                $('#lightgallery3').lightGallery(); 
-                $('#lightgallery4').lightGallery(); 
+
+                $('#lightgallery1').lightGallery();
+                $('#lightgallery2').lightGallery();
+                $('#lightgallery3').lightGallery();
+                $('#lightgallery4').lightGallery();
                 $('#lightgallery5').lightGallery();
-               
+
             });
 
-            
+
         </script>
 @endsection
