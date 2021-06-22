@@ -233,6 +233,74 @@ h2.linea span {
 .w-175 {
     width: 235%!important;
 }
+.montrar{
+  display:none!important;
+}
+@media screen and (max-width:775px){
+.ocultar {
+  display:none;
+}
+.montrar{
+  display:flex;
+}
+}
+@media screen and (max-width:900px){
+  .montrar{
+    display:none!important;
+}
+  .w-75{
+    width: 100%!important;
+
+  }
+  .w-left1{
+    left: 25%!important;;
+ }
+   .w-left2{
+     left:20%!important;
+   }
+   .w-top{
+     top:39px!important;
+   }
+
+}
+
+@media screen and (max-width:1000px) and (min-width: 900px){
+  .montrar{
+    display:none!important;
+}
+  .w-top{
+     top:20%!important;
+   }
+   .w-left2{
+     left:0%!important;
+   }
+   .w-left1{
+     left:42%!important;
+   }
+   .w-75{
+    width: 100%!important;
+
+  }
+}
+ 
+@media screen and (max-width:1100px)and (min-width: 1000px) {
+  .montrar{
+    display:none!important;
+}
+  .w-top{
+     top:0%!important;
+   }
+   .w-left2{
+     left:3%!important;
+   }
+   .w-left1{
+     left:78%!important;
+   }
+   .w-75{
+    width: 100%!important;
+
+  }
+}
 @media screen and (max-width:990px){
     #wrapper div {
         width:320px;
@@ -814,36 +882,32 @@ h6,
            @forelse ($carrusel as $item)
             <div class="carousel-item @if($loop->index==0) active @endif">
               <img src="/img/carrusel/{{$item->urlfoto}}" class="d-block w-100 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;">
-            <div class="row">
-            <div class="col-sm-12 col-xs-12 col-md-12 carousel-caption  carousel-caption-slider pb-5" style="left: 0%!important; top: 5%!important; height: 15%;">
-            <h2 style="font-family: 'Muli', sans-serif; font-weight:bold;">{{$item->encabezado}}</h2>
-            <h4>{{$item->subencabezado}}</h4>
+              <div class="row">
+                <div class="col-sm-12 col-xs-12 col-md-12 carousel-caption  carousel-caption-slider pb-5" style="left: 0%!important; top: 5%!important; height: 15%;">
+                  <h2 style="font-family: 'Muli', sans-serif; font-weight:bold;">{{$item->encabezado}}</h2>
+                  <h4>{{$item->subencabezado}}</h4>
+                </div>
+              </div>
+              <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="left:24%">
+              </div>
             </div>
+            @empty
+            @endforelse
             </div>
-            <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="left:24%">
-
-            </div>
-
-
-          </div>
-        @empty
-        @endforelse
-
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
       </div>
 
 </div>
 
 
-    </div>
+</div>
   </div>
   </div>
 
@@ -951,44 +1015,148 @@ h6,
                 <img src="/img/Testimonios/{{$r->urlfoto}}" alt="{{$r->nombre}}" class="img-fluid rounded-left">
               </div>
             </div>
-            <div class="col-sm-6 text-left" style="font-family:CaviarDreams_Italic" >
+            <div class="col-sm-6" style="font-family:CaviarDreams_Italic" >
               <div style="font-size:17px; font-family:CaviarDreams_Italic;">
                 <a style="font-family:CaviarDreams_Italic">{!!$r->descripcion!!} </a>
               </div>
-                    <p class="text-black text-left" style="font-family:CaviarDreams_bold"> <br><strong>{{$r->nombre}}</strong></p>
+                    <p class="text-black text-left" style="font-family:CaviarDreams_bold" text-align:left;> <br><strong>{{$r->nombre}}</strong></p>
                     <p class="text-black text-left" style="font-family:CaviarDreams">{{$r->title}} <br></p>
             </div>
             @empty
             @endforelse
           </div>
       </div>
-
-
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-  @for ($i = 0; $i < 3; $i++)
-    <li data-target="#carouselExampleIndicators" data-slide-to="{{$i}}" class="active"></li>
-    @endfor
-  </ol>
-  <div class="carousel-inner">
-  @for ($i = 0; $i < 3; $i++)
-    <div class="carousel-item active">
-      <img src="{{}}..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="..." class="d-block w-100" alt="...">
-    </div>
-    @endfor
-
+      <div class="container">
+      <div class="col-sm-10">
+  <h2 class=" linea text-dark text-right" style="font-family:LemonMilk;"><span>Lo más reciente de nuestro blog</span></h2>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  </div>
+  <div class="col-sm-2">
+  </div>
+  <div id="carouselExampleIndicators" class="carousel slide ocultar" data-ride="carousel">
+  <ol class="carousel-indicators">
+    
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  
+      
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <img src="/img/post/lienzo.png" class="d-block w-75 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;">   
+    <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="text-align:left; left:0%; color:black">
+            <div class= "padre container">
+              <section class="section">
+                  <div class=" articulos" style="background:white;">
+                    <div class="row w-top">
+                    @for($a = 0; $a < 2; $a++ )
+                                  @if($a < count($posts))
+                                   @if($a == 1)
+                                   <div class="col-sm-12 w-left1 w-top" style="left:80%">
+                                   @else
+                                   <div class="col-sm-12 w-left2 w-top" style="left:20%">
+
+                                   @endif
+                      
+                       <div class=" article" style="text-align:left;">
+                          <div class="card" style=" line-height: 1.2em; box-shadow: 0 0px; max-width: 540px; background: white; border:0px;">
+                            <div class="row no-gutters">
+                          
+                              <div class="col-md-3" style="background: white; left: 3%; top: 38px; bottom: 0px; height: 137px;">
+                                <div class="card-body" style="padding: 0.25rem;">                                                            
+                                  <p class="card-text" style="font-family:CaviarDreams_Bold; text-align:left; padding: 0.25rem;"><small class="card-text" style="text-align:left;">{{$posts[$a]['nombre']}}</small></p>
+                                  <p>
+                                  <a style="font-family:CaviarDreams; padding-top: 0px; padding-bottom: 0px;" href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
+                                  </p>                            
+                                </div>
+                              </div>
+                            <div class="col-md-4" style="bottom: 0px; top: 25px; left: 3%;  z-index: 1;">
+                                <img src="/img/post/cambia tu vida.jpg" >
+                            </div>
+                            <div class="col-md-5" style=" background: #E5E5E5; left: 0%; height: 157px;">
+                                <div class="card-body">                                
+                                <p class="card-text" style="font-family:CaviarDreams_Italic">{{$posts[$a]['description']}} </p>
+                                  <p class="card-text"><small class="text-muted"></small></p>
+                                </div>
+                              </div>
+                            @endif
+                            @endfor
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+  </div>
+    </div>
+    <div class="carousel-item">
+    <img src="/img/post/lienzo.png" class="d-block w-75 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;">
+    <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="text-align:center; left:0%; color:black">
+    <div class= "padre container">
+              <section class="section">
+                  <div class=" articulos" style="background:white;">
+                    <div class="row">
+                    @for($a = 2; $a < 4; $a++ )
+                                  @if($a < count($posts))
+                                   @if($a == 3)
+                                   <div class="col-sm-12 w-left1 w-top" style="left:80%">
+                                   @else
+                                   <div class="col-sm-12 w-left2 w-top" style="left:20%">
+
+                                   @endif
+                      
+                       <div class=" article" style="text-align:left;">
+                          <div class="card" style=" line-height: 1.2em; box-shadow: 0 0px; max-width: 540px; background: white; border:0px;">
+                            <div class="row no-gutters">
+                          
+                              <div class="col-md-3" style="background: white; left: 3%; top: 38px; bottom: 0px; height: 137px;">
+                                <div class="card-body"  style="padding: 0.25rem;">                                                            
+                                  <p class="card-text" style="font-family:CaviarDreams_Bold; padding: 0.25rem;"><small class="card-text" style="text-align:left;">{{$posts[$a]['nombre']}}</small></p>
+                                  <p>
+                                  <a style="font-family:CaviarDreams; padding-top: 0px; padding-bottom: 0px;" href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
+                                  </p>                            
+                                </div>
+                              </div>
+                            <div class="col-md-4" style="bottom: 0px; top: 25px; left: 3%;  z-index: 1;">
+                                <img src="/img/post/cambia tu vida.jpg" >
+                            </div>
+                            <div class="col-md-5" style=" background: #E5E5E5; left: 0%; height: 157px;">
+                                <div class="card-body">                                
+                                  <p class="card-text" style="font-family:CaviarDreams_Italic">{{$posts[$a]['description']}} </p>
+                                  <p class="card-text"><small class="text-muted"></small></p>
+                                </div>
+                              </div>
+                            @endif
+                            @endfor
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+    <img src="/img/post/lienzo.png" class="d-block w-75 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;">
+    <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="text-align:center; left:0%; color:black">
+      @for($a = 4; $a < 6; $a++ )
+      @if($a < count($posts))
+      {{$posts[$a]['nombre']}}
+      @endif
+      @endfor
+      </div>
+    </div>
+  </div>
+  <a style="z-index: 50;" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+  <a style="z-index: 50;" class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
@@ -998,53 +1166,7 @@ h6,
 
 
 
-
-
-
-
-
-
-      @for ($i = 0; $i < 3; $i++)
-      <p class="d-none">{!!$cont = $cont+2!!}</p>
-      @for($a = $cont2; $a < $cont; $a++ )
-      @if($a < count($posts))
-      {{$posts[$a]['nombre']}}
-      @endif
-      @endfor
-      <p class="d-none">{!!$cont2 = $cont2+2!!}</p>
-    
-      @endfor
-
-
-
-
-  <div class="container-fluid p-0 container">
-  <div class="col-sm-10">
-  <h2 class=" linea text-dark text-right" style="font-family:LemonMilk;"><span>Lo más reciente de nuestro blog</span></h2>
-
-  </div>
-  <div class="col-sm-2">
-  </div>
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            @forelse ($carrusel as $item)
-            <li data-target="#carouselExampleCaptions" data-slide-to="{{$item->orden}}" class="@if($loop->index==0) active @endif"></li>
-            @empty
-            @endforelse
-        </ol>
-        <div class="carousel-inner">
-        @forelse ($carrusel as $item)
-          <div class="carousel-item @if($loop->index==0) active @endif">
-
-            <img src="/img/post/lienzo.png" class="d-block w-100 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;">
-            <div class="row">
-            <div class="col-sm-12 col-xs-12 col-md-12 carousel-caption  carousel-caption-slider pb-5" style="left: 0%!important; top: 5%!important; height: 15%;">
-            <h2 style="font-family: 'Muli', sans-serif; font-weight:bold;">{{$item->encabezado}}</h2>
-            <h4>{{$item->subencabezado}}</h4>
-            </div>
-            </div>
-            <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="text-align:left; left:0%">
-            <div class= "padre container">
+<div class= "padre container mostrar" style="display:none">
               <section class="section">
                   <div class=" articulos" style="background:white;">
                     <div class="row">
@@ -1117,44 +1239,15 @@ h6,
          
             </div>
 
-            <!-- <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12">
-               <div class="col-sm-3 col-xs-3 col-md-3 carousel-caption    ml-auto mr-auto" style="left: 12%!important;">
-                <img src="/img/carrusel/{{$item->urlfoto1}}" class="mx-auto d-block w-100 width-75  fluid rounded-circle thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 3px solid;">
-                 <h4>{{$item->title}}</h4>
-                 <h5>{{$item->descripcion}}</h5>
-                 <a href="{{$item->link}}" class="btn btn-light btn-sm btn-radius">VER MÁS</a>
-               </div>
-               <div class="col-sm-3 col-xs-3 col-md-3 carousel-caption  pb-5" style="left: 37%!important;">
-                <img src="/img/carrusel/{{$item->urlfoto2}}" class="mx-auto d-block w-100 width-75 img-fluid rounded-circle thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 3px solid;">
-                <h4>{{$item->title2}}</h4>
-                <h5>{{$item->descripcion2}}</h5>
-                <a href="{{$item->link}}" class="btn btn-light btn-sm btn-radius">VER MÁS</a>
-               </div>
-              <div class="col-sm-3 col-xs-3 col-md-3 carousel-caption  pb-5" style="left: 60%!important;">
-                <img src="/img/carrusel/{{$item->urlfoto3}}" class=" mx-auto d-block w-100 width-75 img-fluid rounded-circle thumbnail" alt="{{$item->frase}}" style="image-rendering: pixelated; border:white 3px solid;">
-                <h4>{{$item->title3}}</h4>
-                <h5>{{$item->descripcion3}}</h5>
-                <a href="{{$item->link}}" class="btn btn-light  btn-sm btn-radius">VER MÁS</a>
-              </div>
-            </div>
-            </div> -->
-          </div>
-        @empty
-        @endforelse
 
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev" style="z-index: 50;">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
 
-</div>
+
+
+    
+
+
+
+
 
 
 
