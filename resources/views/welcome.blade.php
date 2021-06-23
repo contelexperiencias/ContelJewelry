@@ -241,10 +241,10 @@ h2.linea span {
   display:none;
 }
 .montrar{
-  display:flex;
+  display:flex!important;
 }
 }
-@media screen and (max-width:900px){
+@media screen and (max-width:900px) and (min-width: 776px){
   .montrar{
     display:none!important;
 }
@@ -1038,7 +1038,7 @@ h6,
     
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
   </ol>
   
       
@@ -1141,16 +1141,16 @@ h6,
             </div>
       </div>
     </div>
-    <div class="carousel-item">
-    <img src="/img/post/lienzo.png" class="d-block w-75 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;">
-    <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="text-align:center; left:0%; color:black">
-      @for($a = 4; $a < 6; $a++ )
-      @if($a < count($posts))
-      {{$posts[$a]['nombre']}}
-      @endif
-      @endfor
+    <!-- <div class="carousel-item">
+     <img src="/img/post/lienzo.png" class="d-block w-75 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;">
+      <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="text-align:center; left:0%; color:black">
+        @for($a = 4; $a < 6; $a++ )
+        @if($a < count($posts))
+        {{$posts[$a]['nombre']}}
+        @endif
+        @endfor
       </div>
-    </div>
+    </div> -->
   </div>
   <a style="z-index: 50;" class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -1166,7 +1166,7 @@ h6,
 
 
 
-<div class= "padre container mostrar" style="display:none">
+<div class= "padre container montrar" >
               <section class="section">
                   <div class=" articulos" style="background:white;">
                     <div class="row">

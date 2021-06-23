@@ -68,6 +68,12 @@ class FrontController extends Controller
      
         return view('front.contacto');
     }
+    public function unete(){
+        $producto = Producto::orderBy('visitas','desc')->take(4)->get();
+        return view('front.unete',compact('producto'));
+           
+    }
+
 
     public function contactoenvio(Request $r){
      if(!empty($r)){
