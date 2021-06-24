@@ -162,13 +162,13 @@ h2.lineaAmarilla:before {
                             <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/" title="Portada">INICIO</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link dropdown-toggle" href="/unete" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             ÚNETE
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a style="font-family:LemonMilk;" class="dropdown-item" >Nosotros</a>   
-                            <a style="font-family:LemonMilk;" class="dropdown-item"  >Modelo de negocio</a>  
-                            <a style="font-family:LemonMilk;" class="dropdown-item"  >Galería</a>  
+                            <a href="/unete" style="font-family:LemonMilk;" class="dropdown-item" >Nosotros</a>   
+                            <a href="#ModeloNegocio" style="font-family:LemonMilk;" class="dropdown-item"  >Modelo de negocio</a>  
+                            <a href="#Cofres" style="font-family:LemonMilk;" class="dropdown-item"  >Cofres</a>  
                                 <!-- @forelse ($submenu as $item)
                                 <a class="dropdown-item" href="/artesanias/{{$item->slug}}" title="{{$item->nombre}}" >{{$item->nombre}}</a>    
                                 @empty
@@ -179,7 +179,7 @@ h2.lineaAmarilla:before {
                             <a class="nav-link" href="/empresa" title="Empresa"></a>
                         </li> -->
                         <li class="nav-item">
-                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/blog" title="Últimas publicaciones">GALERÍA</a>
+                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/galeria" title="Últimas publicaciones">GALERÍA</a>
                         </li>
                         <li class="nav-item">
                             <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/blog" title="Últimas publicaciones">BLOG</a>

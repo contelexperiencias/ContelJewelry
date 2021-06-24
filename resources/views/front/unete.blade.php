@@ -13,7 +13,7 @@
   .articulos{
     flex:2 1 auto;
     display: flex;
-    flex-flow:row wrap;
+    flex-flow:row nowrap;
   }
   .article{
     flex:1 1 40%;
@@ -49,13 +49,18 @@ h2.linea span {
   padding: 0 15px;
 }
 
-ul li {
+ ul li.modelonegocio {
   background: url('/img/empresa/checkmarkmedium.png') no-repeat left center;
   padding: 20px 10px 20px 50px;
   list-style: none;
   margin: 0;
   vertical-align: middle;
 }
+
+.article {
+    padding: 1em;
+
+  }
 /* CARD TARJETAS*/
 .section-cards {
 	z-index: 3;
@@ -561,10 +566,10 @@ h6,
     <!--INICIO NOSOTROS -->
       <div class=" carousel-inner ">        
             <img src="/img/empresa/TITULO.png" class="withmin" alt="footer" style="width: 100%;">
-              <div class=" carousel-caption ml-auto mr-auto mx-auto container row" style=" padding-top:5%; top:1px;">
+              <div class=" carousel-caption ml-auto mr-auto mx-auto container row" style=" padding-top:4%; top:1px;">
                 <div class="text-center col-sm-12">
-                    <h2 class=" linea text-dark text-right" style= "font-family:LemonMilk;  left: -87%;"><span style="">NOSOTROS</span></h2>
-                    <h6  class=" text-dark text-center"  style= "font-family:LemonMilk;  left: -81%; font-size:12px;  padding-top:2%;">"vive la vida de tus sueños"</h6>
+                    <h2 id="Nosotros" class=" linea text-dark text-right" style= "font-family:LemonMilk;  left: -87%;"><span style="">NOSOTROS</span></h2>
+                    <h6  class=" text-dark text-center"  style= "font-family:LemonMilk;  left: -81%; font-size:12px;  padding-top:0%;">"vive la vida de tus sueños"</h6>
                 </div>
               </div>
        </div>
@@ -605,10 +610,10 @@ h6,
         <!--INICIO MODELO DE NEGOCIO -->
         <div class=" carousel-inner ">        
             <img src="/img/empresa/TITULO.png" class="withmin" alt="footer" style="width: 100%;">
-              <div class=" carousel-caption ml-auto mr-auto mx-auto container row" style=" padding-top:5%; top:1px;">
+              <div class=" carousel-caption ml-auto mr-auto mx-auto container row" style=" padding-top:4%; top:1px;">
                 <div class="text-center col-sm-12">
-                    <h2 class=" linea text-dark text-right" style= "font-family:LemonMilk;  left: -74%;"><span style="">modelo de negocio</span></h2>
-                    <h6  class=" text-dark text-center"  style= "font-family:LemonMilk;  left: -81%; font-size:12px;  padding-top:2%;">"porque una mujer siempre puede"</h6>
+                    <h2 id="ModeloNegocio" class=" linea text-dark text-right" style= "font-family:LemonMilk;  left: -74%;"><span style="">modelo de negocio</span></h2>
+                    <h6  class=" text-dark text-center"  style= "font-family:LemonMilk;  left: -81%; font-size:12px;  padding-top:0%;">"porque una mujer siempre puede"</h6>
                 </div>
               </div>
         </div>
@@ -641,15 +646,15 @@ h6,
            </div>
             <div class="col-sm-12">
             <h2 style="text-align: center; font-size: 20px; margin-top:20%; font-family:LemonMilk;">tendrás LA CERTEZA DE:</h2>
-                <ul style="font-family:CaviarDreams">
-                    <li style="font-family:CaviarDreams">Cumplir tu sueño de tener tu propio negocio y materializar tus sueños </li>    
-                    <li style="font-family:CaviarDreams">Gestionar tus horarios, y ser dueña de tu tiempo</li>    
-                    <li style="font-family:CaviarDreams">Tener acompañamiento de una empresa sólida, que te brindará todo Lo que 
+                <ul style="font-family:CaviarDreams" class="modelonegocio">
+                    <li class="modelonegocio" style="font-family:CaviarDreams">Cumplir tu sueño de tener tu propio negocio y materializar tus sueños </li>    
+                    <li class="modelonegocio" style="font-family:CaviarDreams">Gestionar tus horarios, y ser dueña de tu tiempo</li>    
+                    <li class="modelonegocio" style="font-family:CaviarDreams">Tener acompañamiento de una empresa sólida, que te brindará todo Lo que 
                         necesitas para crear y gestionar tu negocio</li>        
-                    <li style="font-family:CaviarDreams">Inventario en todo momento, con la confianza de contar con mercancía para 
+                    <li class="modelonegocio" style="font-family:CaviarDreams">Inventario en todo momento, con la confianza de contar con mercancía para 
                         vender</li>
-                    <li style="font-family:CaviarDreams">Contar con una garantía de por vida para todas las piezas</li>
-                    <li style="font-family:CaviarDreams">Ayudar a otras mujeres a lucir siempre bellas </li>
+                    <li class="modelonegocio" style="font-family:CaviarDreams">Contar con una garantía de por vida para todas las piezas</li>
+                    <li class="modelonegocio" style="font-family:CaviarDreams">Ayudar a otras mujeres a lucir siempre bellas </li>
                 </ul>
             </div>
 
@@ -659,10 +664,10 @@ h6,
          <!--INICIO COFRES -->
          <div class=" carousel-inner ">        
             <img src="/img/empresa/TITULO.png" class="withmin" alt="footer" style="width: 100%;">
-              <div class=" carousel-caption ml-auto mr-auto mx-auto container row" style=" padding-top:5%; top:1px;">
+              <div class=" carousel-caption ml-auto mr-auto mx-auto container row" style=" padding-top:4%; top:1px;">
                 <div class="text-center col-sm-12">
-                    <h2 class=" linea text-dark text-right" style= "font-family:LemonMilk;  left: -92%;"><span style="">cofres</span></h2>
-                    <h6  class=" text-dark text-center"  style= "font-family:LemonMilk;  left: -81%; font-size:12px;  padding-top:2%;">"invierte en ti misma"</h6>
+                    <h2 id="Cofres" class=" linea text-dark text-right" style= "font-family:LemonMilk;  left: -92%;"><span style="">cofres</span></h2>
+                    <h6  class=" text-dark text-center"  style= "font-family:LemonMilk;  left: -81%; font-size:12px;  padding-top:0%;">"invierte en ti misma"</h6>
                 </div>
               </div>
         </div>
@@ -680,20 +685,12 @@ h6,
         <div class="col-sm-12 text-center" style="padding-left: 35%; padding-right: 35%; font-size: 1.2em; z-index: 1;     padding-top: 3%;">
           <p style="font-family:LemonMilk; color:black"> “tu elijes el tamaño de tu negocio”</p>
         </div>
-        <div class= "container">
-<div class="col-sm-10">
-  <h2 class=" linea text-dark text-right" style= "font-family:LemonMilk; font-size:25px;"><span>Tu eliges el tamaño de tu negocio</span></h2>
-</div>
-</div>
+
 <div class= "padre container">
   <section class="section">
     <div class= "row ">
-        <div class= "col-sm-6 articulos" style="">
-          <div class="article" style=" ">
-            <img src="/img/carrusel/chicamaletin.png" class="d-block w-100 img-fluid" alt="" style="image-rendering: pixelated;">
-          </div>
-        </div>
-        <div class= "col-sm-6 articulos" style="">
+    
+        <div class= "col-sm-12 articulos" style="">
         @forelse ($producto as $item)
           <article class="article" style=" ">
           <div class="card card-product" style="font-family:CaviarDreams">

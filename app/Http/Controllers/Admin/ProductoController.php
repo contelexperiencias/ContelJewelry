@@ -59,7 +59,7 @@ class ProductoController extends Controller
             // Str::slug($request->nombre)
             $nuevonombre = 'producto_'.$request->nombre.'.'.$imagen->guessExtension();
             Image::make($imagen->getRealPath())
-            ->fit(1200,800,function($constraint){ $constraint->upsize();  })
+            ->fit(180,180,function($constraint){ $constraint->upsize();  })
             ->save( public_path('/img/producto/'.$nuevonombre));
 
             $producto->urlfoto = $nuevonombre;

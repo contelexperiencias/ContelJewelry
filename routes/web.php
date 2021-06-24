@@ -35,3 +35,4 @@ Route::get('/blog/{post}', [App\Http\Controllers\FrontController::class, 'post']
 Route::get('/contacto', [App\Http\Controllers\FrontController::class, 'contacto']);
 Route::post('/contacto', [App\Http\Controllers\FrontController::class, 'contactoenvio']);
 Route::get('/unete', [App\Http\Controllers\FrontController::class, 'unete']);
+Route::get('/galeria', [App\Http\Controllers\FrontController::class, 'galeria']);

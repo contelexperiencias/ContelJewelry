@@ -73,6 +73,16 @@ class FrontController extends Controller
         return view('front.unete',compact('producto'));
            
     }
+    public function galeria(){
+        $carrusel = Carrusel::orderBy('orden','asc')->get();
+        $pulceras = Producto::where('categoria_id','9')->get();
+        $dijes = Producto::where('categoria_id','10')->get();
+        $cadenas = Producto::where('categoria_id','11')->get();
+        $aretes = Producto::where('categoria_id','12')->get();
+        $anillos = Producto::where('categoria_id','13')->get();
+        return view('front.galeria',compact('pulceras','dijes','cadenas','aretes','anillos','carrusel'));
+           
+    }
 
 
     public function contactoenvio(Request $r){

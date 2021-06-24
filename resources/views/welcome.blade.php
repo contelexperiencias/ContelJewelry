@@ -1601,7 +1601,7 @@ h6,
 <!-- publicaciones-->
 
 <!-- publicaciones/-->
-<script src="/js/galeria.js"></script>
+<!-- <script src="/js/galeria.js"></script>
 <script>
 
             $(document).ready(function(){
@@ -1615,5 +1615,5 @@ h6,
             });
 
 
-        </script>
+        </script> -->
 @endsection
