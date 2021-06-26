@@ -2,51 +2,50 @@
 
 @section('content')
 <div class="container bg-white">
-    
-
-
     <div class="row justify-content-center">
         <div class="col-sm-12 mt-5 mb-5 text-center">
-            <h1 class="text-danger">BLOG</h1>
+            <div class="col-sm-5">
+            <h2 class=" linea text-dark text-right" style="font-family:LemonMilk;"><span>Blog</span></h2>
+            </div>
             <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime ipsum, ducimus beatae facilis, qui fugiat inventore dicta magnam numquam, modi ad explicabo quaerat animi magni omnis unde illum vel. Earum!</p>
         </div>
     </div>
-    <div class="archive">
-    @foreach ($posts as $r)
-        <article class="article">
-            
-                <div class="post-content">
-                     <!-- <h2 class="h4"><a href="/blog/{{$r->slug}}" class="text-danger text-decoration-none">{{$r->nombre}}</a></h2> -->
-                               <a class="post-link" href="/blog/{{$r->slug}}">
-                                    <img src="/img/post/{{$r->urlfoto}}" alt="" style="width:100%">
-                                      <h4 style="margin-top: -40px; color: white;font-size:1rem; font-weight: bold; text-align: center;" class="h2-responsive text-response">{{$r->nombre}}</h4>
-                                </a>
-                            </div>
-                       
-                        </article>
-                        @endforeach                 
-                                                            
-                     </div>
-   <!-- <div class="row pb-5">
-    <div class="timeline p-5">
-        <ul>
-            @foreach ($posts as $r)
-            <li>
-                <div class="content">
-                
-                    <h2 class="h4"><a href="/blog/{{$r->slug}}" class="text-danger text-decoration-none">{{$r->nombre}}</a></h2>
-                    <p class="text-white">{{$r->description}}</p>
+   
+
+
+
+<div class="container">
+@foreach ($posts as $r)
+ <div class="card " style=" padding: 2em; border: hidden;">
+      <div class="row">
+            <div class="col-sm-5">
+                <img class="d-block w-100" src="/img/post/{{$r->urlfoto}}" alt="">
+            </div>
+            <div class="col-sm-7">
+                <div class="card-block">
+                 <p style="font-family:CaviarDreams_Bold; font-size:24px;">Toma el valor de cambiar tu vida: invierte en ti.</p>
+                   
                 </div>
-               
-            </li>
-            
-            @endforeach
+                <div style="background:#E5E5E5; width:60%; font-family:CaviarDreams">
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Ipsum dolor sit amet, consectetuer adipiscing elit... </p>
+                </div>
+                <div>
+                <p>
+                <a style="font-family:CaviarDreams; padding-top: 0px; padding-bottom: 0px;" href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
+                </p>
+                    
+                    <p style="font-family:CaviarDreams_Italic;">Finanzas, mujeres, negocios</p>
+                </div>
 
-        </ul>
-    </div>
+            </div> 
+      </div>
+ </div>
+ @endforeach
 
-   </div> -->
 
+ <form> <input type=”datetime-local” id=”fecha” name=”fecha” required=”required”> </form>
+ <form> <input type=”date” id=”fecha” name=”fecha” required=”required”> </form>
+</div>    
 </div>
 <style>
     .timeline{

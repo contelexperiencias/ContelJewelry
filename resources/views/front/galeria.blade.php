@@ -3,7 +3,28 @@
 @section('content')
 
 <style>
+h2.linea {
+  position: relative;
+  z-index: 1;
+}
+h2.linea:before {
+  border-top: 2px solid black;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
+}
+h2.linea span {
+  font-size:25px;
 
+  background: #fff;
+  padding: 0 15px;
+}
 
 .demo-gallery > ul > li a {
   border: 3px solid #FFF;
@@ -159,13 +180,14 @@ a.linea span {
 	margin-bottom: 50px;
 }
 .carousel-caption {
-	background-color: rgba(41, 23, 1, 0.75);
+ 
+
 	height: 100%;
 	left: 0;
 	top: 0;
-	padding: 30px 45px;
+	padding: 0px 0px;
 	text-align: left;
-	width: 340px;
+	width: 360px;
 }
 
 	.carousel-caption p {
@@ -185,9 +207,15 @@ a.linea span {
 	}
 
 	.carousel-caption img {
-		display: block;
-		max-width: 100%;
-		height: auto;
+    height: 100%;
+	left: 0;
+	top: 0;
+	padding: 20px 0px;
+	text-align: left;
+	width: 280px;
+	display: block;
+	max-width: 100%;
+	
 		margin: 0 auto;
 	}
 
@@ -206,68 +234,44 @@ a.linea span {
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/lib/w3.css">
         <link href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css" rel="stylesheet">
+        <div class="col-sm-5">
 
-
+        <h2 class=" linea text-dark text-right" style="font-family:LemonMilk;"><span>Galería</span></h2>
+        </div>
         <div id="slider-home" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
             <li data-target="#slider-home" data-slide-to="0" class="active"></li>
-            <li data-target="#slider-home" data-slide-to="1"></li>
-            <li data-target="#slider-home" data-slide-to="2"></li>
+           
           </ol>
           <div class="carousel-inner" role="listbox">
             <div class="carousel-item active">
             
-              <img src="/img/carrusel/artesanias_1618267579.jpeg" alt="First slide">
+              <img src="/img/empresa/fondogris.png" alt="First slide" style="padding-left: 15%;  padding-bottom: 6%; width: 100%;">
               
               <div class="carousel-caption">
 
-                <h2>menú fin de semana</h2>
-                <img alt="menú 2x1" src="/img/producto/139a0984.jpeg">
-                <p class="h4">en todas las hamburguesas</p>
-                <p>Consulta esta y todas nuestras otras promociones en nuestro apartado de carta.</p>
-                <a href="#" class="btn btn-secondary">Ver carta</a>
-
-              </div>
-
-            </div>
-            <div class="carousel-item">
-              <img src="/img/carrusel/artesanias_1618267579.jpeg" alt="First slide">
               
-              <div class="carousel-caption">
-
-                <h2>martes locos</h2>
                 <img alt="menú 2x1" src="/img/producto/139a0984.jpeg">
-                <p class="h4">pizzas medianas</p>
-                <p>Consulta esta y todas nuestras otras promociones en nuestro apartado de carta.</p>
-                <a href="#" class="btn btn-secondary">Ver carta</a>
+                
 
               </div>
-
+              <div class="carousel-caption" style="left: 34%; padding: 42px 0px; width: 66%;">
+              <p class="h4 text-dark " style="font-family:CaviarDreams; font-size: 54px; line-height: 1;">Diseños exclusivos para todos los estilos</p>
+               <div style="width:75%"> <p  class="text-dark " style="font-family:CaviarDreams;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum </p></div>
+                <p style="font-family:CaviarDreams_Bold; color:black;">Código</p>
+                <p style="font-family:CaviarDreams_Bold; color:black;">12345</p>
+                </div>
             </div>
-
-            <div class="carousel-item">
-              <img src="/img/carrusel/artesanias_1618267579.jpeg" alt="First slide">
-              
-              <div class="carousel-caption">
-
-                <h2>jueves en pareja</h2>
-                <img alt="menú 2x1" src="/img/producto/139a0984.jpeg">
-                <p class="h4">especial perritos</p>
-                <p>Consulta esta y todas nuestras otras promociones en nuestro apartado de carta.</p>
-                <a href="#" class="btn btn-secondary">Ver carta</a>
-
-              </div>
-
-            </div>
+            
           </div>
         </div>
     <nav>
       <div class="nav nav-tabs" id="nav-tab" role="tablist" style="justify-content: center; border:0px!important;">
-        <a class="linea nav-item nav-link active" style="text-align: right; padding: 0.5rem 4rem;     width: 20%;" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Pulseras</a>
-        <a class="linea nav-item nav-link" style="text-align: right; padding: 0.5rem 4rem;     width: 20%;" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Dijes</a>
-        <a class="linea nav-item nav-link" style="text-align: right; padding: 0.5rem 4rem;    width: 20%;" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Cadenas</a>
-        <a class="linea nav-item nav-link" style="text-align: right; padding: 0.5rem 4rem;    width: 20%;" id="nav-contact2-tab" data-toggle="tab" href="#nav-contact2" role="tab" aria-controls="nav-contact2" aria-selected="false">Aretes</a>
-        <a class="linea nav-item nav-link" style="text-align: right; padding: 0.5rem 4rem;    width: 20%;" id="nav-anillo-tab" data-toggle="tab" href="#nav-anillo" role="tab" aria-controls="nav-anillo" aria-selected="false">Anillos</a>
+        <a class="linea nav-item nav-link active" style="text-align: right; padding: 0.5rem 4rem;     width: 20%; color:black;" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Pulseras</a>
+        <a class="linea nav-item nav-link" style="text-align: right; padding: 0.5rem 4rem;     width: 20%; color:black;" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Dijes</a>
+        <a class="linea nav-item nav-link" style="text-align: right; padding: 0.5rem 4rem;    width: 20%; color:black;" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Cadenas</a>
+        <a class="linea nav-item nav-link" style="text-align: right; padding: 0.5rem 4rem;    width: 20%; color:black;" id="nav-contact2-tab" data-toggle="tab" href="#nav-contact2" role="tab" aria-controls="nav-contact2" aria-selected="false">Aretes</a>
+        <a class="linea nav-item nav-link" style="text-align: right; padding: 0.5rem 4rem;    width: 20%; color:black;" id="nav-anillo-tab" data-toggle="tab" href="#nav-anillo" role="tab" aria-controls="nav-anillo" aria-selected="false">Anillos</a>
       </div>
     </nav>
     <div class="tab-content" id="nav-tabContent">

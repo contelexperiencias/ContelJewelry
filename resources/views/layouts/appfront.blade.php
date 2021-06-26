@@ -77,6 +77,28 @@ h2.lineaAmarilla:before {
   width: 95%;
   z-index: -1;
 }
+h2.linea {
+  position: relative;
+  z-index: 1;
+}
+h2.linea:before {
+  border-top: 2px solid black;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
+}
+h2.linea span {
+  font-size:25px;
+
+  background: #fff;
+  padding: 0 15px;
+}
 .float{
 	position:fixed;
 	width:60px;
