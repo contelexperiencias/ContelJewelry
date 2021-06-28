@@ -83,6 +83,12 @@ class FrontController extends Controller
         return view('front.galeria',compact('pulceras','dijes','cadenas','aretes','anillos','carrusel'));
            
     }
+    public function eventos(Request $name){
+        if(!empty($name)){
+            // return Response::json($todo);
+        return view('front.eventos');
+        }
+    }
 
 
     public function contactoenvio(Request $r){

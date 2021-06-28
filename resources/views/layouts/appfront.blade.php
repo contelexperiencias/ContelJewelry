@@ -152,11 +152,7 @@ h2.linea span {
 <a class="appWhatsapp" target="_blanck" href="https://api.whatsapp.com/send?phone=529981535274&text=Hola!&nbsp;me&nbsp;pueden&nbsp;apoyar?">
 <img style= ""  src="/img/Logos/whatsappverde.png" alt="whatsapp" >
 </a>
-<!-- <div class="floating-buttons">
-<a href="https://api.whatsapp.com/send?phone=529981535274&text=" class="float">                         
-                          
-<i class="my-float"><img style= "width: 90%; margin-top:20%"  src="img/Logos/whatsappverde.png" ></i>
-</a> -->
+
 
 <div class="fb-customerchat" attribution=setup_tool page_id="781167248634441" theme_color="#0084ff" logged_in_greeting="hola! cómo podemos ayudarte?" logged_out_greeting="hola! cómo podemos ayudarte?">
 </div>
@@ -191,15 +187,10 @@ h2.linea span {
                             <a href="/unete" style="font-family:LemonMilk;" class="dropdown-item" >Nosotros</a>   
                             <a href="#ModeloNegocio" style="font-family:LemonMilk;" class="dropdown-item"  >Modelo de negocio</a>  
                             <a href="#Cofres" style="font-family:LemonMilk;" class="dropdown-item"  >Cofres</a>  
-                                <!-- @forelse ($submenu as $item)
-                                <a class="dropdown-item" href="/artesanias/{{$item->slug}}" title="{{$item->nombre}}" >{{$item->nombre}}</a>    
-                                @empty
-                                @endforelse -->
+                            
                             </div>
                         </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="/empresa" title="Empresa"></a>
-                        </li> -->
+                   
                         <li class="nav-item">
                             <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/galeria" title="Últimas publicaciones">GALERÍA</a>
                         </li>
@@ -207,7 +198,7 @@ h2.linea span {
                             <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/blog" title="Últimas publicaciones">BLOG</a>
                         </li>
                         <li class="nav-item">
-                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/blog" title="Últimas publicaciones">EVENTOS</a>
+                            <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/eventos" title="Últimas publicaciones">EVENTOS</a>
                         </li>
                         <li class="nav-item">
                             <a style="font-family:LemonMilk; font-size:20px;" class="nav-link" href="/contacto" title="Datos contacto">CONTACTO</a>
@@ -227,18 +218,7 @@ h2.linea span {
         @yield('content')
         <div id="fb-root"></div>
 <script>
-window.fbAsyncInit =function(){
-    FB.init({
-        xfbml:true,
-        version:"v3.3"
-    });
-    };
-    (function(d,s,id){
-        var js, fjs=d.getElementsByTagName(s)[0];
-        if (d.getElemntById(id)) return;
-        js = d.createElement(s); js.id=id;
-        js.src='https://connect.facebook.net/es_La/sdk/xfbml.customerchat.js';
-    }(document,'script','facebook-jssdk'));
+
 </script>
 
         <footer>
