@@ -2,9 +2,39 @@
 
 @section('content')
 <div class="container  pb-5">
+<div class=" carousel-inner ">        
+            <img src="/img/post/encabezadoblog.png" class="withmin" alt="footer" style="width: 100%;">
+              <div class=" carousel-caption ml-auto mr-auto mx-auto container row" style=" padding-top:15%; top:1px;">
+                <div class="text-center col-sm-12">
+                    <h2 id="Nosotros" class=" linea text-dark text-right" style= "font-family:LemonMilk;  left: -87%;"><span style="background:#ee715f;">BLOG</span></h2>
+                    
+                </div>
+              </div>
+       </div>
     <div class="row">
-        <h1 class="p-3 text-black text-center w-100 mt-5">{{$post->nombre}}</h1>
-        <img src="/img/post/{{$post->urlfoto}}" class="img-fluid mx-auto d-block">
+    <div class="col-sm-6">
+        <h1 style="font-family:CaviarDreams_Bold;" class="p-3 text-black text-right w-100 mt-5">{{$post->nombre}}</h1>
+    </div>
+    <div class="col-sm-6">
+    </div>
+    <div class="col-sm-8 text-center"  style="font-family:CaviarDreams; ">
+    {!!$post->description!!}
+    </div>
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-8" style="background:#E5E5E5">
+   
+ <img src="/img/post/{{$post->urlfoto}}" hspace="5" vspace="5" style="float: left;" />
+ {!!$post->descripcion!!}
+ </div>
+<!-- <div class="col-sm-8">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip   ex ea commodo consequat. Duis aute irure dolor in reprehenderit in   voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur   sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt   mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do   eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad   minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip   ex ea commodo consequat. Duis aute irure dolor in reprehenderit in   voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur   sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt   mollit anim id est laborum.
+ <div  style="float: left;">
+ <img src="/img/post/{{$post->urlfoto}}" width="220" height="165" hspace="5" vspace="5" style="float: left;">
+ </div>
+ 
+ </div> -->
+        
 
         
 

@@ -23,7 +23,8 @@ Route::group(['prefix'=>'admin','middleware' => 'auth'], function(){
 
 
 // rutas publicas
-
+Route::resource('/Email', App\Http\Controllers\Admin\EmailController::class);  
+  
 Route::get('/', [App\Http\Controllers\FrontController::class, 'index']);
 Route::get('/empresa', [App\Http\Controllers\FrontController::class, 'empresa']);
 Route::get('/bele', [App\Http\Controllers\FrontController::class, 'bele']);
@@ -31,9 +32,9 @@ Route::get('/bele/{categoria}', [App\Http\Controllers\FrontController::class, 'c
 Route::get('/bele/{categoria}/{producto}', [App\Http\Controllers\FrontController::class, 'producto']);
 Route::get('/blog', [App\Http\Controllers\FrontController::class, 'blog']);
 Route::get('/blog/{post}', [App\Http\Controllers\FrontController::class, 'post']);
-
 Route::get('/contacto', [App\Http\Controllers\FrontController::class, 'contacto']);
 Route::post('/contacto', [App\Http\Controllers\FrontController::class, 'contactoenvio']);
+
 Route::get('/unete', [App\Http\Controllers\FrontController::class, 'unete']);
 Route::get('/galeria', [App\Http\Controllers\FrontController::class, 'galeria']);
 Route::get('/eventos', [App\Http\Controllers\FrontController::class, 'eventos']);

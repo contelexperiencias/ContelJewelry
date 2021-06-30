@@ -821,7 +821,7 @@ h6,
 
 <div class="container">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/lib/w3.css">
+
         <link href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css" rel="stylesheet">
 <!-- <iframe   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  width="1024" height="480" src="https://www.facebook.com/plugins/video.php?height=206&href=https%3A%2F%2Fwww.facebook.com%2FContelJewelry%2Fvideos%2F190230422821995%2F&show_text=false&width=560&t=0" style="width: 100%"></iframe> -->
 
@@ -837,8 +837,8 @@ h6,
 <h2 class="lineaAmarilla" style="bottom: 0px;" ></h2>
 </div>
 <div class="container article" style="background-color:#fff5f630;  margin-top: 10px; margin-bottom: 50px;">
+{!! Form::open(['route'=>['Email.store'],'method'=>'POST','files'=>true]) !!}
 
-<form  style=" margin-top: 10px; padding-top: 1px;" action="/contactoenvio" method="post">
 
 <div class="form-group" >
   <div style="margin-top: 30px;">
@@ -855,12 +855,14 @@ h6,
 
               <div class="form-group">
 
-                <input style="font-family:LemonMilk; background-color: #D0656F30;"  type="tel" class="form-control" id="phone" name="phone"  maxlength="10" placeholder="TELÉFONO:">
+              <input style="font-family:LemonMilk; background-color: #D0656F30; display:none;"  type="tel" class="form-control" id="lada" name="lada"  maxlength="" placeholder="Lada:">
 
+                <input style="font-family:LemonMilk; background-color: #D0656F30;"  type="tel" class="form-control" id="phone" name="phone"  maxlength="10" placeholder="TELÉFONO:">
+                <input style="font-family:LemonMilk; background-color: #D0656F30; display:none;" type="text" class="form-control" name="mensaje" id="mensaje" placeholder="mensaje:">
               </div>
               <div class="text-center">
-
-              <input type="submit" class="btn  btn-radius" style="background-color: #EDC01890; color:black; border-radius: 100px; font-size: 0.7rem;"  name="btnenviar" value="ENVIAR">
+              <!-- <input type="submit" class="btn  btn-radius" style="background-color: #EDC01890; color:black; border-radius: 100px; font-size: 0.7rem;"  name="btnenviar" value="ENVIAR"> -->
+              {!! Form::submit('ENVIAR',['class'=>'btn btn-primary suscripcion','style'=>'background-color: #EDC01890; color:black; border-radius: 100px; font-size: 0.7rem;']) !!}
               </div>
       </form>
 </div>

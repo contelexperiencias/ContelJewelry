@@ -89,22 +89,22 @@ class FrontController extends Controller
            
     }
 
-
     public function contactoenvio(Request $r){
-     if(!empty($r)){
-         $nombre    = $_POST['nombre'];
-         $email     = $_POST['email'];
-         $mensaje   = $_POST['mensaje'];
-         $para = 'desarrolloweb@contelferraez.com';
-         if(mail($email,"ASUNTO CONTACTO ",$mensaje)){
-            $resultado = "Gracias!!!. se envió tu mensaje";
-         }else{
-            $resultado = "No se pudo enviar tu mensaje";
-         }
-        return redirect()->back()->with('success',$resultado);
-     }else{
-         return redirect()->back()->with('success',"NO SE PUDO ENVIA EL MENSAJE");
-     }
-    }
+        if(!empty($r)){
+            $nombre    = $_POST['nombre'];
+            $email     = $_POST['email'];
+            $mensaje   = $_POST['mensaje'];
+            $para = 'desarrolloweb@contelferraez.com';
+            
+            if(mail($para,"ASUNTO CONTACTO ",utf8_decode($mensaje))){
+               $resultado = "Gracias!!!. se envió tu mensaje";
+            }else{
+               $resultado = "No se pudo enviar tu mensaje";
+            }
+           return redirect()->back()->with('success',$resultado);
+        }else{
+            return redirect()->back()->with('success',"NO SE PUDO ENVIAR EL MENSAJE");
+        }
+       }
 
 }
