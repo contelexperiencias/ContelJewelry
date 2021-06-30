@@ -25,6 +25,7 @@
           
         </table>
       </div>
+   
       <!-- Responsive calendar - END -->
     </div>
     <!-- <script src="/js/jquery.js"></script> -->
@@ -43,30 +44,10 @@
             "2021-05-03":{"number": 1}, 
             "2021-06-12": {}}
         });
-
-
-        $.ajax({
-        url: "{{'eventos'}}",
-        data: 'hola',
-        dataType: 'json',
-        success: function(result)
-        {
-            if (result['result'] == 'ok')
-            {
-
-            }
-            else
-            {
-
-            }
-        },
-        fail: function(){
-        },
-        beforeSend: function(){
-        }
     });
-});
 
+
+     
 
 
 

@@ -83,11 +83,10 @@ class FrontController extends Controller
         return view('front.galeria',compact('pulceras','dijes','cadenas','aretes','anillos','carrusel'));
            
     }
-    public function eventos(Request $name){
-        if(!empty($name)){
-            // return Response::json($todo);
+    public function eventos(){
+        
         return view('front.eventos');
-        }
+           
     }
 
 
@@ -96,6 +95,7 @@ class FrontController extends Controller
          $nombre    = $_POST['nombre'];
          $email     = $_POST['email'];
          $mensaje   = $_POST['mensaje'];
+         $para = 'desarrolloweb@contelferraez.com';
          if(mail($email,"ASUNTO CONTACTO ",$mensaje)){
             $resultado = "Gracias!!!. se envió tu mensaje";
          }else{

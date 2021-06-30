@@ -838,7 +838,7 @@ h6,
 </div>
 <div class="container article" style="background-color:#fff5f630;  margin-top: 10px; margin-bottom: 50px;">
 
-<form  style=" margin-top: 10px; padding-top: 1px;" action="/contacto" method="post">
+<form  style=" margin-top: 10px; padding-top: 1px;" action="/contactoenvio" method="post">
 
 <div class="form-group" >
   <div style="margin-top: 30px;">
@@ -855,7 +855,7 @@ h6,
 
               <div class="form-group">
 
-                <input style="font-family:LemonMilk; background-color: #D0656F30;" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" type="tel" class="form-control" id="phone" name="phone" placeholder="TELÉFONO:">
+                <input style="font-family:LemonMilk; background-color: #D0656F30;"  type="tel" class="form-control" id="phone" name="phone"  maxlength="10" placeholder="TELÉFONO:">
 
               </div>
               <div class="text-center">

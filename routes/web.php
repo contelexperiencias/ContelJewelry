@@ -37,4 +37,3 @@ Route::post('/contacto', [App\Http\Controllers\FrontController::class, 'contacto
 Route::get('/unete', [App\Http\Controllers\FrontController::class, 'unete']);
 Route::get('/galeria', [App\Http\Controllers\FrontController::class, 'galeria']);
 Route::get('/eventos', [App\Http\Controllers\FrontController::class, 'eventos']);
-
