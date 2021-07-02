@@ -8,6 +8,7 @@ use App\Models\Carrusel;
 use App\Models\Categoria;
 use App\Models\Producto;
 use App\Models\Post;
+use App\Models\Evento;
 use App\Models\Empresa;
 use App\Models\testimonio;
 
@@ -61,7 +62,8 @@ class FrontController extends Controller
     public function post($post){
         $post = Post::whereSlug($post)->first();
         $post->increment('visitas');
-        return view('front.post',compact('post'));
+        $posts = Post::orderBy('created_at','desc')->get();    
+        return view('front.post',compact('post', 'posts'));
     }
 
     public function contacto(){
@@ -84,8 +86,8 @@ class FrontController extends Controller
            
     }
     public function eventos(){
-        
-        return view('front.eventos');
+        $eventos = Evento::orderBy('dia','asc')->get();
+        return view('front.eventos',compact('eventos'));
            
     }
 

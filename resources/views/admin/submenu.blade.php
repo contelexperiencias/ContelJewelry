@@ -25,6 +25,10 @@
         <li class="list-group-item">
             <a href="/admin/Testimonios">Testimonios</a>
         </li>
+        <li class="list-group-item">
+            <a href="/admin/evento">Eventos</a>
+        </li>
+    
     
 
 

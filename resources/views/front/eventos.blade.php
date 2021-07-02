@@ -20,9 +20,9 @@
               <path fill-rule="evenodd" d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708z"/>
             </svg></div></a>
         </div><hr/>
-     
+
         <table class="days" data-group="days" style="text-align: center; width: 100%; font-family:LemonMilk;">
-          
+      
         </table>
       </div>
    
@@ -33,18 +33,57 @@
     <script src="/js/responsive-calendar.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
+        
+
+
+       
         var d = new Date();
           var m = d.getMonth() + 1;
           var y = d.getFullYear();
+          // var i;
+          // var long = even.length;
+          // var a = [];
+
+          // for (i = 0; i < long; ++i) {
+          //   if (i + 1 == long){
+          //       a.push(even[i] + ":{}");
+          //     }
+          //     else{
+          //   a.push(even[i] + ":{},");
+              
+          //     }
+          //       }
+          var even =[];   
         $(".responsive-calendar").responsiveCalendar({
+          
+      
           time: y+'-'+m,
-          events: {
-            "2021-06-30": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
-            "2021-06-26": {"number": 1, "url": "http://w3widgets.com"}, 
-            "2021-05-03":{"number": 1}, 
-            "2021-06-12": {}}
+          
+          
+          events: { 
+            
+            @foreach ($eventos as $r)
+        
+       "{{$r->dia}}":{"nombre":"{{$r->nombre}}","lugar":"{{$r->lugar}}","hora":"{{$r->hora}}"},
+        
+      
+       @endforeach
+     
+          
+          
+        
+
+            // even[0]: {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
+            // even[1]: {"number": 1, "url": "http://w3widgets.com"}, 
+            // "2021-05-03":{"number": 1}, 
+           
+          }
         });
+
+ 
     });
+
+ 
 
 
      

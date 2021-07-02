@@ -18,13 +18,13 @@ Route::group(['prefix'=>'admin','middleware' => 'auth'], function(){
     Route::resource('/empresa', App\Http\Controllers\Admin\EmpresaController::class);    
     Route::resource('/joyas', App\Http\Controllers\Admin\JoyasController::class); 
     Route::resource('/Testimonios', App\Http\Controllers\Admin\TestimonioController::class);  
-
+    Route::resource('/evento', App\Http\Controllers\Admin\EventoController::class);  
 });
 
 
 // rutas publicas
 Route::resource('/Email', App\Http\Controllers\Admin\EmailController::class);  
-  
+Route::resource('/eventos',App\Http\Controllers\Admin\EmailController::class);  
 Route::get('/', [App\Http\Controllers\FrontController::class, 'index']);
 Route::get('/empresa', [App\Http\Controllers\FrontController::class, 'empresa']);
 Route::get('/bele', [App\Http\Controllers\FrontController::class, 'bele']);

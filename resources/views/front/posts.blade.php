@@ -43,8 +43,7 @@
  @endforeach
 
 
- <form> <input type=”datetime-local” id=”fecha” name=”fecha” required=”required”> </form>
- <form> <input type=”date” id=”fecha” name=”fecha” required=”required”> </form>
+ 
 </div>    
 </div>
 <style>

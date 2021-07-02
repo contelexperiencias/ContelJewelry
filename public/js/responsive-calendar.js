@@ -73,9 +73,10 @@
         return this.drawDays(this.currentYear, this.currentMonth);
       },
       editDays: function(events) {
-        var dateString, day, dayEvents, time, _results;
+        var dateString, day, dayEvents,nombre, time, _results;
         _results = [];
         for (dateString in events) {
+         
           dayEvents = events[dateString];
           this.options.events[dateString] = events[dateString];
           time = this.splitDateString(dateString);
@@ -83,6 +84,7 @@
           day.removeClass('active');
           day.find('.badge').remove();
           day.find('a').removeAttr('href');
+          nombre = dayEvents.nombre;
           if (this.currentMonth === time.month || this.options.activateNonCurrentMonths) {
             _results.push(this.makeActive(day, dayEvents));
           } else {
@@ -206,7 +208,7 @@
       getDaysInMonth: function(year, month) {
         return new Date(year, month + 1, 0).getDate();
       },
-      drawDay: function(lastDayOfMonth, yearNum, monthNum, dayNum, i) {
+      drawDay: function(lastDayOfMonth, yearNum, monthNum, dayNum,nombre,lugar,hora, i) {
         var calcDate, dateNow, dateString, day, dayDate, pastFutureClass;
         day = $("<tr></tr>  ").addClass("day");
         dateNow = new Date();
@@ -224,6 +226,7 @@
         day.addClass("hidden");
        
         dateString = yearNum + "-" + this.addLeadingZero(monthNum) + "-" + this.addLeadingZero(dayNum);
+        
         if (dayNum <= 0 || dayNum > lastDayOfMonth) {
           calcDate = new Date(yearNum, monthNum - 1, dayNum);
           dayNum = calcDate.getDate();
@@ -233,12 +236,21 @@
           day.addClass("not-current").addClass(pastFutureClass);
           if (this.options.activateNonCurrentMonths) {
             dateString = yearNum + "-" + this.addLeadingZero(monthNum) + "-" + this.addLeadingZero(dayNum);
+            
           }
         }
+        if (this.options.events[dateString]) {
+          nombre=this.options.events[dateString].nombre;
+          lugar=this.options.events[dateString].lugar;
+          hora=this.options.events[dateString].hora;
+
+        }
+        
         day.append($("<td>" + dayNum +"</td>"+
-                     "<td>"+ " evento 1  "+"</td>"+
-                     "<td>"+" Centro de conenciones"+"</td>"+
-                     "<td>"+"12:00pm "+"</td>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
+                     "<td>"+ nombre +"</td>"+
+                     "<td>"+lugar+"</td>"+
+                     "<td>"+hora+"</td>"+
+                     "<td><a style='background-color: white; color:black;'>ver..</a></td>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
         if (this.options.monthChangeAnimation) {
           this.applyTransform(day, 'rotateY(180deg)');
           this.applyBackfaceVisibility(day);
@@ -278,12 +290,12 @@
         this.$element.find("[data-head-year]").html(time.getFullYear());
         this.$element.find("[data-head-month]").html(this.options.translateMonths[time.getMonth()]);
         draw = function() {
-          var dayNum, setEvents;
+          var dayNum, nombre, setEvents;
           thisRef.$element.find('[data-group="days"]').empty();
           dayNum = dayBase - firstDayOfMonth;
           i = thisRef.options.startFromSunday ? 0 : 1;
           while (dayNum < loopBase - firstDayOfMonth + dayBase) {
-            thisRef.drawDay(lastDayOfMonth, yearNum, monthNum, dayNum, i);
+            thisRef.drawDay(lastDayOfMonth, yearNum, monthNum, dayNum, nombre, i);
             dayNum = dayNum + 1;
             i = i + 1;
           }
