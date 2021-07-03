@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Models\Evento;
+use App\Models\Categoria;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Image;
 
 class EventoController extends Controller
 {
@@ -61,8 +64,8 @@ class EventoController extends Controller
 
     public function edit($id){
         $evento = Evento::findOrFail($id);
-        $categorias=Categoria::orderBy('dia','ASC')->pluck('dia','id');
-        return view('admin.evento.edit',compact('evento','categorias'));
+        // $categorias=Categoria::orderBy('id','ASC')->pluck('dia','id');
+        return view('admin.evento.edit',compact('evento'));
     }
 
     

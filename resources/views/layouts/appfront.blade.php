@@ -157,7 +157,7 @@ h2.linea span {
 <div class="fb-customerchat" attribution=setup_tool page_id="781167248634441" theme_color="#0084ff" logged_in_greeting="hola! cómo podemos ayudarte?" logged_out_greeting="hola! cómo podemos ayudarte?">
 </div>
 <a href="https://api.whatsapp.com/send?phone=529981535274&text=" class="float">
-<i class="my-float"><img style= "width: 70%; margin-top:220%; "  src="/img/Logos/mensseger.png" ></i>
+<i class="my-float"><img style= "width: 70%; margin-top:125%; "  src="/img/Logos/mensseger.png" ></i>
 </a>
 </div>
 

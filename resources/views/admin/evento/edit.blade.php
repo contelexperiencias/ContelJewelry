@@ -6,41 +6,43 @@
         @include('admin.submenu')
         <div class="col-sm-10">
 
-            {!! Form::open(['route'=>['post.update',$post],'method'=>'PUT','files'=>true]) !!}
+            {!! Form::open(['route'=>['evento.update',$evento],'method'=>'PUT','files'=>true]) !!}
 
             <div class="jumbotron">
-                <div class="form-group">
-                    <label for="title">INGRESE TITLE</label>
-                    {!! Form::text('title',$post->title,['class'=>'form-control','maxlength'=>'67']) !!}
-                </div>
+               
                 <div class="form-group">
                     <label for="description">INGRESE description</label>
-                    {!! Form::textarea('description',$post->description,['class'=>'form-control','maxlength'=>'250','rows'=>'4']) !!}
+                    {!! Form::textarea('description',$evento->description,['class'=>'form-control','maxlength'=>'250','rows'=>'4']) !!}
                 </div>
 
                 <div class="form-group">
                     <label for="nombre">INGRESE NOMBRE</label>
-                    {!! Form::text('nombre',$post->nombre,['class'=>'form-control','maxlength'=>'100']) !!}
+                    {!! Form::text('nombre',$evento->nombre,['class'=>'form-control','maxlength'=>'100']) !!}
                 </div>
 
                 <div class="form-group">
                     <label for="descripcion">INGRESE DESCRIPCIÓN</label>
-                    {!! Form::textarea('descripcion',$post->descripcion,['class'=>'form-control']) !!}
+                    {!! Form::textarea('descripcion',$evento->descripcion,['class'=>'form-control']) !!}
                 </div>
+                <div class="row">
 
-                <div class="form-group">
-                    <label for="orden">INGRESE ORDEN</label>
-                    {!! Form::text('orden',$post->orden,['class'=>'form-control']) !!}
+                <div class="form-group col-sm-4">
+                    <label for="dia">INGRESE dia</label>
+                    {!! Form::date('dia',$evento->dia,['class'=>'form-control']) !!}
                 </div>
-
-                <div class="form-group">
-                    <label for="categoria_id">ELIJA CATEGORÍA</label>
-                    {!! Form::select('categoria_id',$categorias,$post->categoria_id,['class'=>'form-control']) !!}
+                <div class="form-group col-sm-4">
+                    <label for="lugar">INGRESE LUGAR</label>
+                    {!! Form::text('lugar',$evento->lugar,['class'=>'form-control']) !!}
+                </div>
+                <div class="form-group col-sm-4">
+                    <label for="hora">INGRESE HORA</label>
+                    {!! Form::time('hora',$evento->hora,['class'=>'form-control']) !!}
+                </div>
                 </div>
 
                 <div class="form-group">
                     <label for="urlfoto">IMAGEN</label> <br>
-                    <img src="/img/post/{{$post->urlfoto}}">
+                    <img src="/img/eventos/{{$evento->urlfoto}}">
                     {!! Form::file('urlfoto') !!}
                 </div>
             </div>           
