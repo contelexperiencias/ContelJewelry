@@ -212,7 +212,7 @@ a.linea span {
 	top: 0;
 	padding: 20px 0px;
 	text-align: left;
-	width: 280px;
+	width: 360px;
 	display: block;
 	max-width: 100%;
 	
@@ -226,13 +226,63 @@ a.linea span {
 		border: none;
 	}
 
+  @media screen and (max-width:1200px) and (min-width: 360px){
+    .carousel-caption {
+       height: 100%;
+       left: 0;
+       top: 0;
+       padding: 0px 0px!important;
+       text-align: left;
+       width: 34%;
+        }
+
+.carousel-caption img {
+    height: 100%;
+	left: 0;
+	top: 0;
+	padding: 20px 0px!important;
+	text-align: left;
+	/* width: 100px; */
+	display: block;
+	max-width: 100%;
+	
+		margin: 0 auto;
+	}
+  .div-caption360{
+    left: 35%;
+    padding: 0px 5px!important;
+    width: 66%;
+}
+  .p-caption360{
+    font-family: CaviarDreams;
+    font-size: calc(10px + 2 * ((94vw - 310px) / 660))!important;
+    line-height: 1;
+  }
+  .div-caption360-2{
+    width: 98%;
+    }
+    .p-caption360-2{
+      font-size: calc(10px + 2 * ((94vw - 310px) / 660))!important;
+    line-height: 12px!important;
+    margin-bottom: 0rem!important;
+
+    }
+    .carousel-caption .h4 {
+		font-size: calc(16px + 4 * ((100vw - 310px) / 660))!important;
+		margin-bottom: 10px!important;
+		margin-top: 8px;
+	}
+ 
+
+}
+
     </style>
 <!-- Galeria /-->
 
 
 <div class= container>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="/lib/w3.css">
+<!-- <link rel="stylesheet" href="/lib/w3.css"> -->
         <link href="https://cdn.jsdelivr.net/lightgallery/1.3.9/css/lightgallery.min.css" rel="stylesheet">
         <div class="col-sm-5">
 
@@ -240,30 +290,42 @@ a.linea span {
         </div>
         <div id="slider-home" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
-            <li data-target="#slider-home" data-slide-to="0" class="active"></li>
-           
+          @forelse ($carruselgalerias as $item)
+            <li data-target="#slider-home" data-slide-to="{{$item->orden}}" class="@if($loop->index==0) active @endif"></li>
+            @empty
+            @endforelse
           </ol>
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
+          <div class="carousel-inner" >
+          @forelse ($carruselgalerias as $item)
+            <div class="carousel-item @if($loop->index==0) active @endif">
             
               <img src="/img/empresa/fondogris.png" alt="First slide" style="padding-left: 15%;  padding-bottom: 6%; width: 100%;">
               
               <div class="carousel-caption">
 
               
-                <img alt="menú 2x1" src="/img/producto/139a0984.jpeg">
+                <img alt="aretes_12345" src="/img/carruselGaleria/{{$item->urlfoto}}">
                 
 
               </div>
-              <div class="carousel-caption" style="left: 34%; padding: 42px 0px; width: 66%;">
-              <p class="h4 text-dark " style="font-family:CaviarDreams; font-size: 54px; line-height: 1;">Diseños exclusivos para todos los estilos</p>
-               <div style="width:75%"> <p  class="text-dark " style="font-family:CaviarDreams;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum </p></div>
-                <p style="font-family:CaviarDreams_Bold; color:black;">Código</p>
-                <p style="font-family:CaviarDreams_Bold; color:black;">12345</p>
+              <div class="carousel-caption div-caption360" style="left: 34%; padding: 42px 0px; width: 66%;">
+              <p class="h4 text-dark p-caption360" style="font-family:CaviarDreams; font-size: 54px; line-height: 1;">{{$item->title}}</p>
+               <div style="width:75%" class="div-caption360-2"> <p  class="text-dark p-caption360-2" style="font-family:CaviarDreams;">{{$item->descripcion}}</p></div>
+                <p style="font-family:CaviarDreams_Bold; color:black;" class="p-caption360-2">Código</p>
+                <p style="font-family:CaviarDreams_Bold; color:black;" class="p-caption360-2">{{$item->codigo}}</p>
                 </div>
             </div>
-            
+            @empty
+            @endforelse
           </div>
+          <a style="z-index: 50;" class="carousel-control-prev" href="#slider-home" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a  style="z-index: 50;" class="carousel-control-next" href="#slider-home" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
         </div>
     <nav>
       <div class="nav nav-tabs" id="nav-tab" role="tablist" style="justify-content: center; border:0px!important;">
@@ -285,7 +347,7 @@ a.linea span {
                     <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
                 </a>
                 
-                <a>codigo</a>
+                <a>{{$item->title}}</a>
          
             </li>
             @empty
@@ -302,7 +364,7 @@ a.linea span {
               <a href="">
                   <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
               </a>
-              <a>codigo</a>
+              <a>{{$item->title}}</a>
           </li>
           @empty
               @endforelse
@@ -318,7 +380,7 @@ a.linea span {
              <a href="">
                 <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
              </a>
-             <a>codigo</a>
+             <a>{{$item->title}}</a>
         </li>
         @empty
             @endforelse
@@ -333,7 +395,7 @@ a.linea span {
              <a href="">
                 <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
              </a>
-             <a>codigo</a>
+             <a>{{$item->title}}</a>
         </li>
         @empty
             @endforelse
@@ -348,7 +410,7 @@ a.linea span {
              <a href="">
                 <img class="img-responsive" src="/img/producto/{{$item->urlfoto}}">
              </a>
-             <a>codigo</a>
+             <a>{{$item->title}}</a>
         </li>
         @empty
             @endforelse

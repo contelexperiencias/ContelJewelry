@@ -8,7 +8,7 @@
             <div class="jumbotron">       
                 <div class="form-group">
                     <label for="descripcion">INGRESE DESCRIPCIÓN</label>
-                    {!! Form::text('descripcion',$carrusel->descripcion,['class'=>'form-control','maxlength'=>'67']) !!}
+                    {!! Form::text('descripcion',$carrusel->descripcion,['class'=>'form-control','maxlength'=>'250']) !!}
                 </div>
                 <div class="form-group">
                     <label for="link">INGRESE LINK</label>

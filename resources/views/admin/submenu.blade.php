@@ -28,7 +28,11 @@
         <li class="list-group-item">
             <a href="/admin/evento">Eventos</a>
         </li>
-    
+        @if (Auth::user()->tipo_usuario == '1')   
+        <li class="list-group-item">
+            <a href="/admin/carruselgaleria">Carrusel Galeria</a>
+        </li>
+        @endif
     
 
 

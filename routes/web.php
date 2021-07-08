@@ -19,6 +19,7 @@ Route::group(['prefix'=>'admin','middleware' => 'auth'], function(){
     Route::resource('/joyas', App\Http\Controllers\Admin\JoyasController::class); 
     Route::resource('/Testimonios', App\Http\Controllers\Admin\TestimonioController::class);  
     Route::resource('/evento', App\Http\Controllers\Admin\EventoController::class);  
+    Route::resource('/carruselgaleria', App\Http\Controllers\Admin\CarruselGaleriaController::class);
 });
 
 

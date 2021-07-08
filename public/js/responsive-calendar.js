@@ -249,8 +249,7 @@
         day.append($("<td>" + dayNum +"</td>"+
                      "<td>"+ nombre +"</td>"+
                      "<td>"+lugar+"</td>"+
-                     "<td>"+hora+"</td>"+
-                     "<td><a style='background-color: white; color:black;'>ver..</a></td>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
+                     "<td>"+hora+" hrs"+"</td>").attr("data-day", dayNum).attr("data-month", monthNum).attr("data-year", yearNum));
         if (this.options.monthChangeAnimation) {
           this.applyTransform(day, 'rotateY(180deg)');
           this.applyBackfaceVisibility(day);

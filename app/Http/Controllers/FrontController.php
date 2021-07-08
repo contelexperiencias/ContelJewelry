@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\CarruselGaleria;
 use App\Models\Carrusel;
 use App\Models\Categoria;
 use App\Models\Producto;
@@ -76,13 +76,14 @@ class FrontController extends Controller
            
     }
     public function galeria(){
+        $carruselgalerias = CarruselGaleria::orderBy('orden','asc')->get();
         $carrusel = Carrusel::orderBy('orden','asc')->get();
         $pulceras = Producto::where('categoria_id','9')->get();
         $dijes = Producto::where('categoria_id','10')->get();
         $cadenas = Producto::where('categoria_id','11')->get();
         $aretes = Producto::where('categoria_id','12')->get();
         $anillos = Producto::where('categoria_id','13')->get();
-        return view('front.galeria',compact('pulceras','dijes','cadenas','aretes','anillos','carrusel'));
+        return view('front.galeria',compact('pulceras','dijes','cadenas','aretes','anillos','carrusel','carruselgalerias'));
            
     }
     public function eventos(){

@@ -645,7 +645,7 @@ h6,
                 </div>
            </div>
             <div class="col-sm-12">
-            <h2 style="text-align: center; font-size: 20px; margin-top:20%; font-family:LemonMilk;">tendrás LA CERTEZA DE:</h2>
+            <h2 style="text-align: center; font-size: 20px; margin-top:10%; font-family:LemonMilk;">tendrás LA CERTEZA DE:</h2>
                 <ul style="font-family:CaviarDreams" class="modelonegocio">
                     <li class="modelonegocio" style="font-family:CaviarDreams">Cumplir tu sueño de tener tu propio negocio y materializar tus sueños </li>    
                     <li class="modelonegocio" style="font-family:CaviarDreams">Gestionar tus horarios, y ser dueña de tu tiempo</li>    

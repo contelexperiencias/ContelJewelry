@@ -862,7 +862,7 @@ h6,
               </div>
               <div class="text-center">
               <!-- <input type="submit" class="btn  btn-radius" style="background-color: #EDC01890; color:black; border-radius: 100px; font-size: 0.7rem;"  name="btnenviar" value="ENVIAR"> -->
-              {!! Form::submit('ENVIAR',['class'=>'btn btn-primary suscripcion','style'=>'background-color: #EDC01890; color:black; border-radius: 100px; font-size: 0.7rem;']) !!}
+              {!! Form::submit('ENVIAR',['class'=>'btn btn-primary suscripcion','style'=>'background-color: #EDC01890; border-color:black; color:black; border-radius: 100px; font-size: 0.7rem;']) !!}
               </div>
       </form>
 </div>
@@ -883,11 +883,12 @@ h6,
           <div class="carousel-inner">
            @forelse ($carrusel as $item)
             <div class="carousel-item @if($loop->index==0) active @endif">
-              <img src="/img/carrusel/{{$item->urlfoto}}" class="d-block w-100 img-fluid" alt="{{$item->frase}}" style="image-rendering: pixelated;">
+            <img src="/img/empresa/fondogris.png" alt="First slide" style="padding-left: 0%;  padding-bottom: 0%; width: 100%;">
+              <!-- <img src="/img/carrusel/{{$item->urlfoto}}" class="d-block w-100 img-fluid" alt="{{$item->frase}}" style=""> -->
               <div class="row">
                 <div class="col-sm-12 col-xs-12 col-md-12 carousel-caption  carousel-caption-slider pb-5" style="left: 0%!important; top: 5%!important; height: 15%;">
-                  <h2 style="font-family: 'Muli', sans-serif; font-weight:bold;">{{$item->encabezado}}</h2>
-                  <h4>{{$item->subencabezado}}</h4>
+                  <h2 style="font-family: 'LemonMilk'; color:black; font-weight:bold;">{{$item->title}}</h2>
+                  <h4 style="font-family: 'CaviarDreams'; color:black;">{{$item->descripcion}}</h4>
                 </div>
               </div>
               <div class="carousel-caption carousel-caption-slider ml-auto mr-auto mx-auto" style="left:24%">
@@ -896,11 +897,11 @@ h6,
             @empty
             @endforelse
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <a style="z-index:30" class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <a style="z-index:30" class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="sr-only">Next</span>
             </a>
@@ -990,7 +991,7 @@ h6,
         </div>
         <div id="wrapper" class="col-sm-6 pt-5 pb-5">
 
-                <img src="/img/producto/cofre-diamante.png" alt="" class="img-fluid rounded-left">
+                <img src="/img/empresa/cofre.png" alt="" class="img-fluid rounded-left">
 
         </div>
         </div>
@@ -1069,12 +1070,13 @@ h6,
                                 <div class="card-body" style="padding: 0.25rem;">                                                            
                                   <p class="card-text" style="font-family:CaviarDreams_Bold; text-align:left; padding: 0.25rem;"><small class="card-text" style="text-align:left;">{{$posts[$a]['nombre']}}</small></p>
                                   <p>
-                                  <a style="font-family:CaviarDreams; padding-top: 0px; padding-bottom: 0px;" href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
+                                  <a style="font-family:CaviarDreams; padding-top: 0px; padding-bottom: 0px;" href="/blog/{{$posts[$a]['slug']}}" class="btn btn-outline-dark">Leer más</a>
                                   </p>                            
                                 </div>
                               </div>
                             <div class="col-md-4" style="bottom: 0px; top: 25px; left: 3%;  z-index: 1;">
-                                <img src="/img/post/cambia tu vida.jpg" >
+                                <!-- <img src="/img/post/cambia tu vida.jpg" > -->
+                                <img src="/img/post/{{$posts[$a]['urlfoto']}}" >
                             </div>
                             <div class="col-md-5" style=" background: #E5E5E5; left: 0%; height: 157px;">
                                 <div class="card-body">                                
@@ -1118,12 +1120,13 @@ h6,
                                 <div class="card-body"  style="padding: 0.25rem;">                                                            
                                   <p class="card-text" style="font-family:CaviarDreams_Bold; padding: 0.25rem;"><small class="card-text" style="text-align:left;">{{$posts[$a]['nombre']}}</small></p>
                                   <p>
-                                  <a style="font-family:CaviarDreams; padding-top: 0px; padding-bottom: 0px;" href="/blog/{{$r->slug}}" class="btn btn-outline-dark">Leer más</a>
+                                  <a style="font-family:CaviarDreams; padding-top: 0px; padding-bottom: 0px;" href="/blog/{{$posts[$a]['slug']}}" class="btn btn-outline-dark">Leer más</a>
                                   </p>                            
                                 </div>
                               </div>
                             <div class="col-md-4" style="bottom: 0px; top: 25px; left: 3%;  z-index: 1;">
-                                <img src="/img/post/cambia tu vida.jpg" >
+                                <!-- <img src="/img/post/cambia tu vida.jpg" > -->
+                                <img src="/img/post/{{$posts[$a]['urlfoto']}}" >
                             </div>
                             <div class="col-md-5" style=" background: #E5E5E5; left: 0%; height: 157px;">
                                 <div class="card-body">                                

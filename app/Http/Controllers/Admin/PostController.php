@@ -28,7 +28,7 @@ class PostController extends Controller
             $imagen = $request->file('urlfoto');
             $nuevonombre = Str::slug($request->nombre).'.'.$imagen->guessExtension();
             Image::make($imagen->getRealPath())
-            ->fit(800,450,function($constraint){ $constraint->upsize();  })
+            ->fit(255,255,function($constraint){ $constraint->upsize();  })
             ->save( public_path('/img/post/'.$nuevonombre));
 
             $post->urlfoto = $nuevonombre;
@@ -53,7 +53,7 @@ class PostController extends Controller
             $imagen = $request->file('urlfoto');
             $nuevonombre = Str::slug($request->nombre).'.'.$imagen->guessExtension();
             Image::make($imagen->getRealPath())
-            ->fit(800,450,function($constraint){ $constraint->upsize();  })
+            ->fit(255,255,function($constraint){ $constraint->upsize();  })
             ->save( public_path('/img/post/'.$nuevonombre));
 
             $post->urlfoto = $nuevonombre;

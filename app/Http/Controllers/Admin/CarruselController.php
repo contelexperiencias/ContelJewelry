@@ -28,7 +28,7 @@ class CarruselController extends Controller
             $imagen = $request->file('urlfoto');
             $nuevonombre = 'artesanias_'.time().'.'.$imagen->guessExtension();
             Image::make($imagen->getRealPath())
-            ->fit(1080,1080,function($constraint){ $constraint->upsize();  })
+            ->fit(600,256,function($constraint){ $constraint->upsize();  })
             ->save( public_path('/img/carrusel/'.$nuevonombre));
 
             $carrusel->urlfoto = $nuevonombre;
@@ -53,7 +53,7 @@ class CarruselController extends Controller
             
             $nuevonombre = 'artesanias_'.time().'.'.$imagen->guessExtension();
             Image::make($imagen->getRealPath())
-            ->fit(883,310,function($constraint){ $constraint->upsize();  })
+            ->fit(600,256,function($constraint){ $constraint->upsize();  })
             ->save( public_path('/img/carrusel/'.$nuevonombre));
 
             $carrusel->urlfoto = $nuevonombre;
